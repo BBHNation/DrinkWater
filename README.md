@@ -6,3 +6,6 @@ An APP which can notice you to drink
 - 在今日插件中直接记录
 - 使用Apple Watch来记录喝水
 - 使用健康应用导入喝水记录
+
+### 其中一些功能正在迭代中
+### 希望有一个更好的版本推出
