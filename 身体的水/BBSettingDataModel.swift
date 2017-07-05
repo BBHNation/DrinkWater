@@ -9,14 +9,16 @@
 import WatchKit
 
 class BBSettingDataModel: NSObject {
+    
     public var age : Int!
     public var height : Int!
     public var weight : Int!
     public var gender : Bool!
     public var littleDrink : Int!
     public var cupDrink : Int!
-    
     static let sharedModel = BBSettingDataModel()
+    
+    /// 初始化，判断是否已经设置过，如果已经设置过，则使用以前的，没有则重新初始化
     override init(){
         let isSeted = UserDefaults.standard.bool(forKey: "isSetedSettingData")
         if isSeted == true{
@@ -38,6 +40,7 @@ class BBSettingDataModel: NSObject {
         
     }
     
+    /// 保存数据到UserDefalt
     public func saveDataToUserDefalt() {
         UserDefaults.standard.set(age, forKey: "age")
         UserDefaults.standard.set(height, forKey: "height")
@@ -57,6 +60,10 @@ class BBSettingDataModel: NSObject {
     }
     
     
+    
+    /// 根据人体数据来计算一天的喝水量，以后会加入天气情况
+    ///
+    /// - Returns: 返回一天的喝水量
     public func calculateWaterNum() -> Int{
         var waterNum = 1300
         

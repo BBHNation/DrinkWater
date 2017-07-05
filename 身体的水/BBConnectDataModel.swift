@@ -13,9 +13,9 @@ import SVProgressHUD
 class BBConnectDataModel: NSObject, WCSessionDelegate{
     static let sharedModel = BBConnectDataModel()
     
-    override init(){
-    }
+    override init(){}
     
+    /// 初始化后设置Session
     public func setSession() {
         if WCSession.isSupported() {
             let session = WCSession.default()
@@ -35,6 +35,10 @@ class BBConnectDataModel: NSObject, WCSessionDelegate{
         sendMessage(dic: [LEFT_WATER_NUM:num ?? 0])
     }
     
+    
+    /// 发送消息
+    ///
+    /// - Parameter dic: 向Watch发送消息，消息格式是 [String : Any]
     public func sendMessage(dic : [String:Any]) {
         SVProgressHUD.show(withStatus: "传输中")
         let session = WCSession.default()
@@ -47,29 +51,34 @@ class BBConnectDataModel: NSObject, WCSessionDelegate{
         }
     }
     
+    
+    /// 获取还剩多少水没喝
+    ///
+    /// - Returns: 返回Int值，表示还剩多少水要喝
     func leftWaterNum() -> Int{
         let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
         return (dataUserDefaults?.integer(forKey: LEFT_WATER_NUM))!
     }
     
+    
+    /// 保存剩下没喝的水量
+    ///
+    /// - Parameter value: 还剩多少水没有喝
     func saveWaterLeftData(value : Int) {
+        // 这里使用的是共享的UserDefault来同步数据，需要修改
+        // 直接使用健康应用中记录的喝水量来计算还剩余多少水需要喝
         let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
         dataUserDefaults?.set(value, forKey: LEFT_WATER_NUM)
         dataUserDefaults?.synchronize()
     }
     
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        
-    }
     
-    func sessionDidDeactivate(_ session: WCSession) {
-        
-    }
+    // MARK: - 一些协议方法
+    func sessionDidBecomeInactive(_ session: WCSession) {}
     
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
-    }
+    func sessionDidDeactivate(_ session: WCSession) {}
     
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         if message[LEFT_WATER_NUM] != nil {
@@ -83,6 +92,4 @@ class BBConnectDataModel: NSObject, WCSessionDelegate{
             replyHandler([LEFT_WATER_NUM:leftWaterNum(),CUP_DRINK:BBSettingDataModel.sharedModel.cupDrink,LITTLE_DRINK:BBSettingDataModel.sharedModel.littleDrink])
         }
     }
-    
-    
 }
