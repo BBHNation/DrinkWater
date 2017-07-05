@@ -1,5 +1,5 @@
 # 忽略Pods下的所有文件
 /Pods
 
-# 忽略UI下的所有文件
-/UI
+# 忽略Podfile.lock
+Podfile.lock
