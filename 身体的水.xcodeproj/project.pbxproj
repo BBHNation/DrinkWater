@@ -24,6 +24,7 @@
 		521378291E36058B00B7D561 /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521378191E36054C00B7D561 /* Init.swift */; };
 		5213782A1E36058B00B7D561 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213781A1E36054C00B7D561 /* Ring.swift */; };
 		5213782B1E36058B00B7D561 /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213781B1E36054C00B7D561 /* Spark.swift */; };
+		521E57571F0CC9E300547BC9 /* BBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E57561F0CC9E300547BC9 /* BBExtensions.swift */; };
 		5225194F1E44108300427AE2 /* BBSettingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525324261E306CA100A69872 /* BBSettingDataModel.swift */; };
 		522519501E4410CF00427AE2 /* BBSettingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525324261E306CA100A69872 /* BBSettingDataModel.swift */; };
 		523781981E4C0F2B0095C713 /* BBDrinkIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523781971E4C0F2B0095C713 /* BBDrinkIC.swift */; };
@@ -53,7 +54,6 @@
 		5287590A1E39CA99003A87E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528759091E39CA99003A87E0 /* HealthKit.framework */; };
 		5287590C1E39CAA1003A87E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287590B1E39CAA1003A87E0 /* HealthKit.framework */; };
 		5287590D1E39CAAE003A87E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287590B1E39CAA1003A87E0 /* HealthKit.framework */; };
-		52B6807A1E4C0D7F00C721FF /* BBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B680791E4C0D7F00C721FF /* BBExtensions.swift */; };
 		52B6807E1E4C0E5600C721FF /* BBMainWaterIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6807D1E4C0E5600C721FF /* BBMainWaterIC.swift */; };
 		52CA42521E2F24570038EE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA42511E2F24570038EE33 /* AppDelegate.swift */; };
 		52CA42571E2F24570038EE33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CA42551E2F24570038EE33 /* Main.storyboard */; };
@@ -143,6 +143,7 @@
 		521378191E36054C00B7D561 /* Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Init.swift; sourceTree = "<group>"; };
 		5213781A1E36054C00B7D561 /* Ring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 		5213781B1E36054C00B7D561 /* Spark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
+		521E57561F0CC9E300547BC9 /* BBExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBExtensions.swift; sourceTree = "<group>"; };
 		523781971E4C0F2B0095C713 /* BBDrinkIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBDrinkIC.swift; sourceTree = "<group>"; };
 		523781991E4C1D680095C713 /* BBExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBExtensions.swift; sourceTree = "<group>"; };
 		5253240E1E3044D800A69872 /* 身体的水 Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "身体的水 Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,7 +170,6 @@
 		528759031E39C582003A87E0 /* BBHealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBHealthKitManager.swift; sourceTree = "<group>"; };
 		528759091E39CA99003A87E0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		5287590B1E39CAA1003A87E0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		52B680791E4C0D7F00C721FF /* BBExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBExtensions.swift; sourceTree = "<group>"; };
 		52B6807D1E4C0E5600C721FF /* BBMainWaterIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBMainWaterIC.swift; sourceTree = "<group>"; };
 		52CA424E1E2F24570038EE33 /* 身体的水.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "身体的水.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CA42511E2F24570038EE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -393,8 +393,8 @@
 				52CA42D91E2F308D0038EE33 /* BBMainIC.swift */,
 				52B6807D1E4C0E5600C721FF /* BBMainWaterIC.swift */,
 				523781971E4C0F2B0095C713 /* BBDrinkIC.swift */,
+				521E57561F0CC9E300547BC9 /* BBExtensions.swift */,
 				52CA42DB1E2F35350038EE33 /* BBConnectModel.swift */,
-				52B680791E4C0D7F00C721FF /* BBExtensions.swift */,
 				52CA42781E2F24580038EE33 /* ExtensionDelegate.swift */,
 				52CA427A1E2F24580038EE33 /* NotificationController.swift */,
 				52CA427C1E2F24580038EE33 /* ComplicationController.swift */,
@@ -783,6 +783,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B6807E1E4C0E5600C721FF /* BBMainWaterIC.swift in Sources */,
+				521E57571F0CC9E300547BC9 /* BBExtensions.swift in Sources */,
 				522519501E4410CF00427AE2 /* BBSettingDataModel.swift in Sources */,
 				52CA427B1E2F24580038EE33 /* NotificationController.swift in Sources */,
 				52CA427D1E2F24580038EE33 /* ComplicationController.swift in Sources */,
@@ -790,7 +791,6 @@
 				528759011E39C53B003A87E0 /* BBStaticVar.swift in Sources */,
 				52CA42791E2F24580038EE33 /* ExtensionDelegate.swift in Sources */,
 				52CA42DC1E2F35350038EE33 /* BBConnectModel.swift in Sources */,
-				52B6807A1E4C0D7F00C721FF /* BBExtensions.swift in Sources */,
 				528759051E39C8EE003A87E0 /* BBHealthKitManager.swift in Sources */,
 				523781981E4C0F2B0095C713 /* BBDrinkIC.swift in Sources */,
 			);

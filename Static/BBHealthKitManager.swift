@@ -36,51 +36,6 @@ class BBHealthKitManager: NSObject {
         }
     }
     
-//    public func readProfile()
-//    func readProfile()->(age:Int?,biologicalsex:HKBiologicalSexObject?,bloodType:HKBloodTypeObject?){
-//        
-//        //请求年龄
-//        var age:Int?
-//        let birthDay:NSDate;
-//        do {
-//            birthDay = try healthStore.dateOfBirthComponents() as NSDate
-//            let today = NSDate()
-//            let diff = NSCalendar.currentCalendar.components(.Year, fromDate: birthDay, toDate: today, options: NSCalendar.Options(rawValue: 0))
-//            age = diff.year
-//        }catch {
-//            
-//        }
-//        //请求性别
-//        var biologicalSex
-//        :HKBiologicalSexObject?
-//        do {
-//            biologicalSex  = try healthStore.biologicalSex()
-//            
-//        }catch {
-//            
-//        }
-//        //请求血型
-//        var hkbloodType:HKBloodTypeObject?
-//        
-//        do {
-//            hkbloodType = try hkHealthStore.bloodType()
-//        }catch{
-//            
-//        }
-//        
-//        return (age,biologicalSex,hkbloodType)
-//    }
-//    
-    
-    //        var hkbloodType = HKBloodTypeObject()
-    //        do {
-    //            hkbloodType = try healthStore.bloodType()
-    //        } catch {
-    //
-    //        }
-    //
-    //        print(hkbloodType)
-    
     
     /// 写入喝水数据
     ///
@@ -125,6 +80,54 @@ class BBHealthKitManager: NSObject {
         let readDataTypes: Set<HKObjectType> = [waterType,biologicalSexType,birthdayType,heightType,weightType,dietaryCalorieEnergyType]
         return readDataTypes
     }
+    
+    
+    /// 获取今天喝了多少水
+    ///
+    /// - Parameter completion: 参数是一个处理函数
+    func getTotalDrinkCount(completion: @escaping (Double, Error?) -> ()) {
+        var query: HKQuery?
+        let waterType = HKObjectType.quantityType(forIdentifier: .dietaryWater)
+        let timeSortDescriptor = NSSortDescriptor.init(key: HKSampleSortIdentifierEndDate, ascending: false)
+        let predicate = predicateForSamplesToday()
+        
+        query = HKSampleQuery.init(sampleType: waterType!, predicate: predicate, limit: 0, sortDescriptors: [timeSortDescriptor], resultsHandler: { (qurry, results, err) in
+            if err != nil {
+                completion(0, err)
+            } else {
+                var totalWater = 0.0;
+                for quantitySample in results! {
+                    let quantity = (quantitySample as! HKQuantitySample).quantity
+                    let waterUnit = HKUnit.literUnit(with: .milli)
+                    let userWater = quantity.doubleValue(for: waterUnit)
+                    totalWater += userWater
+                }
+                completion(totalWater, nil)
+            }
+        })
+        self.healthStore.execute(query!)
+    }
+    
+    
+    /// 获取今天的Predicate
+    ///
+    /// - Returns: 返回今天的Predicate
+    private func predicateForSamplesToday() -> NSPredicate{
+        let calender = Calendar.current
+        let now = Date()
+        
+        var components = calender.dateComponents([.day,.month,.year], from: now)
+        components.hour = 0
+        components.minute = 0
+        components.second = 0
+        
+        let startDate = calender.date(from: components)
+        let endDate = calender.date(byAdding: .day, value: 1, to: startDate!)
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: [])
+        return predicate
+    }
+    
+    
     
     
     

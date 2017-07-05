@@ -208,7 +208,9 @@
                         <outlet property="adviceLabel" destination="WjJ-Uv-oUp" id="0Fa-iw-P7x"/>
                         <outlet property="circleImage" destination="pZK-RX-3Z0" id="Qvh-Su-GZg"/>
                         <outlet property="cupButton" destination="hi4-3a-QY8" id="lm1-fl-cuv"/>
+                        <outlet property="drinkNoticeLabel" destination="I4H-lY-zal" id="lRG-ZT-nNs"/>
                         <outlet property="littleButton" destination="0Kl-2M-Py9" id="ukN-Yx-QDy"/>
+                        <outlet property="noticeLabel" destination="NE5-Vg-LLq" id="gPj-Z2-dET"/>
                         <outlet property="waterCupLabel" destination="2VP-vz-jFa" id="Nsg-kg-6TG"/>
                         <outlet property="waterNumLabel" destination="1rh-DS-UEf" id="ag3-g6-VNR"/>
                         <outlet property="weatherIcon" destination="FNg-45-6Pk" id="hi2-XP-KRW"/>
