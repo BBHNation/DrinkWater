@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="身体的水_Today" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="1800" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rh-DS-UEf">
+                                <rect key="frame" x="220" y="0.0" width="121" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="130" id="Aue-Pq-6yq"/>
+                                    <constraint firstAttribute="height" constant="48" id="k2I-KF-J39"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="53"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hi4-3a-QY8" customClass="FaveButton" customModule="身体的水_Today" customModuleProvider="target">
+                                <rect key="frame" x="324" y="54" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="U80-im-on5"/>
+                                    <constraint firstAttribute="height" constant="40" id="iHC-fA-6vg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" image="iOSCup"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.1803921568627451" green="1" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.1803921568627451" green="1" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dotFirstColor">
+                                        <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dotSecondColor">
+                                        <color key="value" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleFromColor">
+                                        <color key="value" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleToColor">
+                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="drinkOneCup:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Vzt-eZ-LXm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kl-2M-Py9" customClass="FaveButton" customModule="身体的水_Today" customModuleProvider="target">
+                                <rect key="frame" x="220" y="56" width="40" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Wv5-oK-jZv"/>
+                                    <constraint firstAttribute="height" constant="37" id="wA5-pS-hCU"/>
+                                </constraints>
+                                <state key="normal" image="iOSWater"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.25882352941176473" green="0.83921568627450982" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.25882352941176473" green="0.83921568627450982" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dotFirstColor">
+                                        <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dotSecondColor">
+                                        <color key="value" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleFromColor">
+                                        <color key="value" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleToColor">
+                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="drinkLittle:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="ZZB-Og-326"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtR-9q-9t7">
+                                <rect key="frame" x="341" y="27" width="23" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HvC-FX-Fg2"/>
+                                    <constraint firstAttribute="width" constant="23" id="WxR-Cd-lAY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="喝一杯" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fue-H5-dGw">
+                                <rect key="frame" x="327" y="95" width="35" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="U3a-e5-G3r"/>
+                                    <constraint firstAttribute="width" constant="35" id="wxJ-s9-QJM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="喝一口" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4o6-1S-m96">
+                                <rect key="frame" x="223" y="94" width="35" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="58M-u8-h4j"/>
+                                    <constraint firstAttribute="width" constant="35" id="EfZ-Dt-tL9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pZK-RX-3Z0">
+                                <rect key="frame" x="16" y="5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Ghk-Kw-4ob"/>
+                                    <constraint firstAttribute="width" constant="100" id="nj6-Um-OS4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="喝水进度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XmO-7y-VG6">
+                                <rect key="frame" x="36" y="46" width="61.5" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4o6-1S-m96" firstAttribute="centerX" secondItem="0Kl-2M-Py9" secondAttribute="centerX" id="61B-J9-Qa6"/>
+                            <constraint firstItem="OtR-9q-9t7" firstAttribute="bottom" secondItem="1rh-DS-UEf" secondAttribute="bottom" id="BUw-zR-FbH"/>
+                            <constraint firstItem="1rh-DS-UEf" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="F5L-FW-Gkh"/>
+                            <constraint firstItem="pZK-RX-3Z0" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="FT3-ew-EWX"/>
+                            <constraint firstItem="1rh-DS-UEf" firstAttribute="leading" secondItem="pZK-RX-3Z0" secondAttribute="trailing" constant="104" id="Wcb-w2-rsn"/>
+                            <constraint firstItem="pZK-RX-3Z0" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="Ylh-vR-ySM"/>
+                            <constraint firstItem="0Kl-2M-Py9" firstAttribute="top" secondItem="1rh-DS-UEf" secondAttribute="bottom" constant="8" id="feW-hY-LSF"/>
+                            <constraint firstItem="4o6-1S-m96" firstAttribute="top" secondItem="0Kl-2M-Py9" secondAttribute="bottom" constant="1" id="ffT-dg-g2z"/>
+                            <constraint firstItem="fue-H5-dGw" firstAttribute="centerX" secondItem="hi4-3a-QY8" secondAttribute="centerX" id="lS3-jQ-fmN"/>
+                            <constraint firstItem="hi4-3a-QY8" firstAttribute="top" secondItem="OtR-9q-9t7" secondAttribute="bottom" constant="6" id="mFR-38-7ys"/>
+                            <constraint firstItem="fue-H5-dGw" firstAttribute="top" secondItem="hi4-3a-QY8" secondAttribute="bottom" constant="1" id="mJP-5P-YUS"/>
+                            <constraint firstItem="0Kl-2M-Py9" firstAttribute="leading" secondItem="1rh-DS-UEf" secondAttribute="leading" id="mZ6-iZ-q7a"/>
+                            <constraint firstItem="hi4-3a-QY8" firstAttribute="trailing" secondItem="OtR-9q-9t7" secondAttribute="trailing" id="ssS-nr-PhN"/>
+                            <constraint firstItem="XmO-7y-VG6" firstAttribute="centerX" secondItem="pZK-RX-3Z0" secondAttribute="centerX" id="uQS-3l-9li"/>
+                            <constraint firstItem="OtR-9q-9t7" firstAttribute="leading" secondItem="1rh-DS-UEf" secondAttribute="trailing" id="v8g-Dv-QCm"/>
+                            <constraint firstItem="XmO-7y-VG6" firstAttribute="centerY" secondItem="pZK-RX-3Z0" secondAttribute="centerY" id="wcc-aZ-Srr"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="110"/>
+                    <connections>
+                        <outlet property="circleImage" destination="pZK-RX-3Z0" id="Qvh-Su-GZg"/>
+                        <outlet property="cupButton" destination="hi4-3a-QY8" id="lm1-fl-cuv"/>
+                        <outlet property="littleButton" destination="0Kl-2M-Py9" id="ukN-Yx-QDy"/>
+                        <outlet property="waterNumLabel" destination="1rh-DS-UEf" id="ag3-g6-VNR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31.199999999999999" y="91.754122938530742"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iOSCup" width="184" height="158"/>
+        <image name="iOSWater" width="184" height="165"/>
+    </resources>
+</document>

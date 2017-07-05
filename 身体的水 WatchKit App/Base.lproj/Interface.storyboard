@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ru0-NW-OlY">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="759"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="身体的水_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="759"/>
+        </scene>
+        <!--还需喝水-->
+        <scene sceneID="SG2-GN-t49">
+            <objects>
+                <controller title="还需喝水" id="gCe-JT-pH3">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="0cv-cy-fMF">
+                            <items>
+                                <group width="1" height="56" alignment="left" id="IKb-7j-QbH">
+                                    <items>
+                                        <label height="51" alignment="left" text="1000" id="aAo-OW-LLW">
+                                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="boldSystem" pointSize="62"/>
+                                        </label>
+                                        <label alignment="left" verticalAlignment="bottom" text="ml" id="t2G-QF-bAm">
+                                            <color key="textColor" red="0.0" green="0.58823529411764708" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="10"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <separator alignment="left" alpha="0.59999999999999998" id="RKe-cr-dlr">
+                                    <color key="color" red="0.0" green="0.58823529411764708" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </separator>
+                                <group width="154" height="28" alignment="center" id="OSX-MT-2Gb">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="bottom" text="选择喝水量" textAlignment="center" id="Ptt-Vf-h1H">
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="11"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" height="46" alignment="center" id="9Ol-Di-kE5">
+                                    <items>
+                                        <imageView width="50" height="41" alignment="right" verticalAlignment="bottom" image="一口" id="pBe-gw-X8A">
+                                            <gestureRecognizers>
+                                                <tapGestureRecognizer id="HkW-zr-nKK">
+                                                    <connections>
+                                                        <action selector="drinkLittle:" destination="gCe-JT-pH3" id="KFY-Sr-Aot"/>
+                                                    </connections>
+                                                </tapGestureRecognizer>
+                                            </gestureRecognizers>
+                                        </imageView>
+                                        <imageView width="54" height="47" alignment="left" image="一杯" id="nfd-JI-9Ic">
+                                            <gestureRecognizers>
+                                                <tapGestureRecognizer id="ztw-Rm-AiH">
+                                                    <connections>
+                                                        <action selector="drinkCup:" destination="gCe-JT-pH3" id="ZIo-Tc-Xep"/>
+                                                    </connections>
+                                                </tapGestureRecognizer>
+                                            </gestureRecognizers>
+                                        </imageView>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="tAQ-9h-FYq">
+                                    <items>
+                                        <label width="53" alignment="left" text="一杯" textAlignment="center" id="f5f-OT-1qA">
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="10"/>
+                                        </label>
+                                        <label width="57" alignment="right" text="一口        " textAlignment="center" id="pbZ-DD-Rlo">
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="10"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <menu key="menu" id="eZ2-rc-brB">
+                        <items>
+                            <menuItem title="与iPhone同步" icon="repeat" id="EHE-0r-Fil">
+                                <connections>
+                                    <action selector="synchoronizeWithPhone" destination="gCe-JT-pH3" id="XLu-z2-mud"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="chooseGroup" destination="OSX-MT-2Gb" id="CJv-cL-oeQ"/>
+                        <outlet property="contentGroup" destination="0cv-cy-fMF" id="WWB-x3-gKD"/>
+                        <outlet property="describGroup" destination="tAQ-9h-FYq" id="O10-iU-5TE"/>
+                        <outlet property="imagesGroup" destination="9Ol-Di-kE5" id="Yn2-NB-Tgw"/>
+                        <outlet property="waterLabel" destination="aAo-OW-LLW" id="xvC-z7-Cjc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="423.69230769230774" y="217.51282051282053"/>
+        </scene>
+        <!--身体的水-->
+        <scene sceneID="ivK-XW-0ip">
+            <objects>
+                <controller title="身体的水" id="ru0-NW-OlY" customClass="BBMainWaterIC" customModule="身体的水_WatchKit_Extension">
+                    <items>
+                        <imageView alignment="left" hidden="YES" id="t9Z-hK-xys"/>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="Gos-iN-qu7">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="还需喝水" id="cJI-kK-TET">
+                                    <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <group width="1" alignment="center" verticalAlignment="center" id="2wH-31-3ik">
+                                    <items>
+                                        <label height="36" alignment="center" text="1000" id="ANi-oP-KRS">
+                                            <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="40"/>
+                                        </label>
+                                        <label alignment="center" verticalAlignment="bottom" text="ml" textAlignment="left" id="ird-SH-upi">
+                                            <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="10"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                            <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="0.0" colorSpace="calibratedRGB"/>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="backCircleGroup" destination="Gos-iN-qu7" id="CXX-DM-GjY"/>
+                        <outlet property="drewImage" destination="t9Z-hK-xys" id="heg-w9-GXy"/>
+                        <outlet property="leftWaterLabel" destination="ANi-oP-KRS" id="A1K-OU-IQ0"/>
+                        <segue destination="KDM-84-8JY" kind="relationship" relationship="nextPage" id="r1h-EM-x1f"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="724" y="218"/>
+        </scene>
+        <!--喝水-->
+        <scene sceneID="859-3D-1zT">
+            <objects>
+                <controller title="喝水" id="KDM-84-8JY" customClass="BBDrinkIC" customModule="身体的水_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="134" alignment="center" hidden="YES" id="eKb-If-Td4">
+                            <items>
+                                <imageView width="60" height="80" alignment="center" verticalAlignment="center" image="cup" initiallyAnimated="NO" animationDuration="1" id="3Hj-tB-c5x"/>
+                            </items>
+                        </group>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="hqa-ag-s5C">
+                            <items>
+                                <group width="1" height="66" alignment="left" layout="vertical" id="fhp-XM-BhJ">
+                                    <items>
+                                        <imageView width="44" height="46" alignment="center" image="finalCup" id="sUh-x8-4KY"/>
+                                        <label height="13" alignment="center" text="一杯" textAlignment="center" id="MiB-Ph-fIt">
+                                            <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="4cc-D5-bJL">
+                                            <connections>
+                                                <action selector="drinkACup:" destination="KDM-84-8JY" id="5EG-Vj-maS"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                </group>
+                                <group width="1" height="73" alignment="left" verticalAlignment="bottom" layout="vertical" id="HO4-0d-Q5a">
+                                    <items>
+                                        <imageView width="56" height="40" alignment="center" image="finalWater" id="V7H-ui-Yc1"/>
+                                        <label height="14" alignment="center" text="一口" textAlignment="center" id="G2w-Dg-IpO">
+                                            <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="5ni-r6-wNK">
+                                            <connections>
+                                                <action selector="drinkAMouse:" destination="KDM-84-8JY" id="OqM-uB-bu5"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="animationGroup" destination="eKb-If-Td4" id="bqy-Ik-w2J"/>
+                        <outlet property="animationImage" destination="3Hj-tB-c5x" id="PsQ-EU-Z4Z"/>
+                        <outlet property="contentGroup" destination="hqa-ag-s5C" id="sK5-lR-pkh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="980" y="218"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+</document>

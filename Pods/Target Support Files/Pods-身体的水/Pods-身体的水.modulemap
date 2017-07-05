@@ -1,0 +1,6 @@
+framework module Pods_____ {
+  umbrella header "Pods-身体的水-umbrella.h"
+
+  export *
+  module * { export * }
+}

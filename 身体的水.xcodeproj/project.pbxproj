@@ -1,0 +1,1140 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D6A3B7055BB02C3C43ACA6F /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2057D251D541151E45FA8EA6 /* Pods_____.framework */; };
+		5213781C1E36054C00B7D561 /* FaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521378131E36054C00B7D561 /* FaveButton.swift */; };
+		5213781D1E36054C00B7D561 /* FaveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521378141E36054C00B7D561 /* FaveIcon.swift */; };
+		5213781E1E36054C00B7D561 /* Constraints+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521378161E36054C00B7D561 /* Constraints+.swift */; };
+		5213781F1E36054C00B7D561 /* Easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521378171E36054C00B7D561 /* Easing.swift */; };
+		521378201E36054C00B7D561 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521378181E36054C00B7D561 /* Geometry.swift */; };
+		521378211E36054C00B7D561 /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521378191E36054C00B7D561 /* Init.swift */; };
+		521378221E36054C00B7D561 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213781A1E36054C00B7D561 /* Ring.swift */; };
+		521378231E36054C00B7D561 /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213781B1E36054C00B7D561 /* Spark.swift */; };
+		521378241E36057400B7D561 /* FaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521378131E36054C00B7D561 /* FaveButton.swift */; };
+		521378251E36058500B7D561 /* FaveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521378141E36054C00B7D561 /* FaveIcon.swift */; };
+		521378261E36058B00B7D561 /* Constraints+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521378161E36054C00B7D561 /* Constraints+.swift */; };
+		521378271E36058B00B7D561 /* Easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521378171E36054C00B7D561 /* Easing.swift */; };
+		521378281E36058B00B7D561 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521378181E36054C00B7D561 /* Geometry.swift */; };
+		521378291E36058B00B7D561 /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521378191E36054C00B7D561 /* Init.swift */; };
+		5213782A1E36058B00B7D561 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213781A1E36054C00B7D561 /* Ring.swift */; };
+		5213782B1E36058B00B7D561 /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213781B1E36054C00B7D561 /* Spark.swift */; };
+		5225194F1E44108300427AE2 /* BBSettingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525324261E306CA100A69872 /* BBSettingDataModel.swift */; };
+		522519501E4410CF00427AE2 /* BBSettingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525324261E306CA100A69872 /* BBSettingDataModel.swift */; };
+		523781981E4C0F2B0095C713 /* BBDrinkIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523781971E4C0F2B0095C713 /* BBDrinkIC.swift */; };
+		5237819B1E4C1D710095C713 /* BBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523781991E4C1D680095C713 /* BBExtensions.swift */; };
+		5237819C1E4C1D730095C713 /* BBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523781991E4C1D680095C713 /* BBExtensions.swift */; };
+		525324111E3044D800A69872 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525324101E3044D800A69872 /* NotificationCenter.framework */; };
+		525324141E3044D800A69872 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525324131E3044D800A69872 /* TodayViewController.swift */; };
+		525324171E3044D800A69872 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525324151E3044D800A69872 /* MainInterface.storyboard */; };
+		5253241B1E3044D800A69872 /* 身体的水 Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5253240E1E3044D800A69872 /* 身体的水 Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		525324231E3068B300A69872 /* BBConnectDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525324221E3068B300A69872 /* BBConnectDataModel.swift */; };
+		525324251E3069AC00A69872 /* BBNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525324241E3069AC00A69872 /* BBNotificationModel.swift */; };
+		525324271E306CA100A69872 /* BBSettingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525324261E306CA100A69872 /* BBSettingDataModel.swift */; };
+		525324281E30A45800A69872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CA42581E2F24570038EE33 /* Assets.xcassets */; };
+		5253242B1E30AEC300A69872 /* BBBeginTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253242A1E30AEC300A69872 /* BBBeginTimePicker.swift */; };
+		5253242D1E30AED300A69872 /* BBEndTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253242C1E30AED300A69872 /* BBEndTimePicker.swift */; };
+		5253242F1E30AF9B00A69872 /* BBFrequencyTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5253242E1E30AF9B00A69872 /* BBFrequencyTimePicker.swift */; };
+		525324351E30B26700A69872 /* BBBeginTimePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525324341E30B26700A69872 /* BBBeginTimePicker.xib */; };
+		525324371E30B2CA00A69872 /* BBNoticeSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525324361E30B2CA00A69872 /* BBNoticeSettingVC.swift */; };
+		525324391E30C39F00A69872 /* BBEndTimePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525324381E30C39E00A69872 /* BBEndTimePicker.xib */; };
+		5253243B1E30C47500A69872 /* BBFrequencyTimePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5253243A1E30C47500A69872 /* BBFrequencyTimePicker.xib */; };
+		528759001E39C534003A87E0 /* BBStaticVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528758FF1E39C534003A87E0 /* BBStaticVar.swift */; };
+		528759011E39C53B003A87E0 /* BBStaticVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528758FF1E39C534003A87E0 /* BBStaticVar.swift */; };
+		528759021E39C53C003A87E0 /* BBStaticVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528758FF1E39C534003A87E0 /* BBStaticVar.swift */; };
+		528759041E39C582003A87E0 /* BBHealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528759031E39C582003A87E0 /* BBHealthKitManager.swift */; };
+		528759051E39C8EE003A87E0 /* BBHealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528759031E39C582003A87E0 /* BBHealthKitManager.swift */; };
+		528759061E39C8F2003A87E0 /* BBHealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528759031E39C582003A87E0 /* BBHealthKitManager.swift */; };
+		5287590A1E39CA99003A87E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528759091E39CA99003A87E0 /* HealthKit.framework */; };
+		5287590C1E39CAA1003A87E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287590B1E39CAA1003A87E0 /* HealthKit.framework */; };
+		5287590D1E39CAAE003A87E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287590B1E39CAA1003A87E0 /* HealthKit.framework */; };
+		52B6807A1E4C0D7F00C721FF /* BBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B680791E4C0D7F00C721FF /* BBExtensions.swift */; };
+		52B6807E1E4C0E5600C721FF /* BBMainWaterIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6807D1E4C0E5600C721FF /* BBMainWaterIC.swift */; };
+		52CA42521E2F24570038EE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA42511E2F24570038EE33 /* AppDelegate.swift */; };
+		52CA42571E2F24570038EE33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CA42551E2F24570038EE33 /* Main.storyboard */; };
+		52CA42591E2F24570038EE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CA42581E2F24570038EE33 /* Assets.xcassets */; };
+		52CA425C1E2F24570038EE33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CA425A1E2F24570038EE33 /* LaunchScreen.storyboard */; };
+		52CA42611E2F24570038EE33 /* 身体的水 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 52CA42601E2F24570038EE33 /* 身体的水 WatchKit App.app */; };
+		52CA42671E2F24570038EE33 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CA42651E2F24570038EE33 /* Interface.storyboard */; };
+		52CA42691E2F24570038EE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CA42681E2F24570038EE33 /* Assets.xcassets */; };
+		52CA42701E2F24580038EE33 /* 身体的水 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52CA426F1E2F24580038EE33 /* 身体的水 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52CA42791E2F24580038EE33 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA42781E2F24580038EE33 /* ExtensionDelegate.swift */; };
+		52CA427B1E2F24580038EE33 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA427A1E2F24580038EE33 /* NotificationController.swift */; };
+		52CA427D1E2F24580038EE33 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA427C1E2F24580038EE33 /* ComplicationController.swift */; };
+		52CA427F1E2F24580038EE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CA427E1E2F24580038EE33 /* Assets.xcassets */; };
+		52CA428F1E2F2B0A0038EE33 /* BBSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA428E1E2F2B0A0038EE33 /* BBSettingVC.swift */; };
+		52CA42DA1E2F308D0038EE33 /* BBMainIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA42D91E2F308D0038EE33 /* BBMainIC.swift */; };
+		52CA42DC1E2F35350038EE33 /* BBConnectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA42DB1E2F35350038EE33 /* BBConnectModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		525324191E3044D800A69872 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52CA42461E2F24570038EE33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5253240D1E3044D800A69872;
+			remoteInfo = "身体的水 Today";
+		};
+		52CA42621E2F24570038EE33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52CA42461E2F24570038EE33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52CA425F1E2F24570038EE33;
+			remoteInfo = "身体的水 WatchKit App";
+		};
+		52CA42711E2F24580038EE33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52CA42461E2F24570038EE33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52CA426E1E2F24580038EE33;
+			remoteInfo = "身体的水 WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5253241F1E3044D800A69872 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5253241B1E3044D800A69872 /* 身体的水 Today.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CA42861E2F24580038EE33 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				52CA42701E2F24580038EE33 /* 身体的水 WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CA428A1E2F24580038EE33 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				52CA42611E2F24570038EE33 /* 身体的水 WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2057D251D541151E45FA8EA6 /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5213780E1E3601AF00B7D561 /* FaveButton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FaveButton.framework; path = "../../../Library/Developer/Xcode/DerivedData/身体的水-arcrkllgisqhynbqmswmgsehbxyk/Build/Products/Debug-iphoneos/FaveButton/FaveButton.framework"; sourceTree = "<group>"; };
+		521378131E36054C00B7D561 /* FaveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaveButton.swift; sourceTree = "<group>"; };
+		521378141E36054C00B7D561 /* FaveIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaveIcon.swift; sourceTree = "<group>"; };
+		521378161E36054C00B7D561 /* Constraints+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constraints+.swift"; sourceTree = "<group>"; };
+		521378171E36054C00B7D561 /* Easing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Easing.swift; sourceTree = "<group>"; };
+		521378181E36054C00B7D561 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		521378191E36054C00B7D561 /* Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Init.swift; sourceTree = "<group>"; };
+		5213781A1E36054C00B7D561 /* Ring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
+		5213781B1E36054C00B7D561 /* Spark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
+		523781971E4C0F2B0095C713 /* BBDrinkIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBDrinkIC.swift; sourceTree = "<group>"; };
+		523781991E4C1D680095C713 /* BBExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBExtensions.swift; sourceTree = "<group>"; };
+		5253240E1E3044D800A69872 /* 身体的水 Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "身体的水 Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		525324101E3044D800A69872 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		525324131E3044D800A69872 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		525324161E3044D800A69872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		525324181E3044D800A69872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		525324201E30462B00A69872 /* 身体的水 Today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "身体的水 Today.entitlements"; sourceTree = "<group>"; };
+		525324211E30483D00A69872 /* 身体的水.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "身体的水.entitlements"; sourceTree = "<group>"; };
+		525324221E3068B300A69872 /* BBConnectDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBConnectDataModel.swift; sourceTree = "<group>"; };
+		525324241E3069AC00A69872 /* BBNotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBNotificationModel.swift; sourceTree = "<group>"; };
+		525324261E306CA100A69872 /* BBSettingDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBSettingDataModel.swift; sourceTree = "<group>"; };
+		5253242A1E30AEC300A69872 /* BBBeginTimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBBeginTimePicker.swift; sourceTree = "<group>"; };
+		5253242C1E30AED300A69872 /* BBEndTimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBEndTimePicker.swift; sourceTree = "<group>"; };
+		5253242E1E30AF9B00A69872 /* BBFrequencyTimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBFrequencyTimePicker.swift; sourceTree = "<group>"; };
+		525324341E30B26700A69872 /* BBBeginTimePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBBeginTimePicker.xib; sourceTree = "<group>"; };
+		525324361E30B2CA00A69872 /* BBNoticeSettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBNoticeSettingVC.swift; sourceTree = "<group>"; };
+		525324381E30C39E00A69872 /* BBEndTimePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBEndTimePicker.xib; sourceTree = "<group>"; };
+		5253243A1E30C47500A69872 /* BBFrequencyTimePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBFrequencyTimePicker.xib; sourceTree = "<group>"; };
+		5253243C1E318D5000A69872 /* 身体的水 WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "身体的水 WatchKit App.entitlements"; sourceTree = "<group>"; };
+		5253243D1E318D5B00A69872 /* 身体的水 WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "身体的水 WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		525324421E31A4CE00A69872 /* 身体的水-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "身体的水-Bridging-Header.h"; sourceTree = "<group>"; };
+		528758FF1E39C534003A87E0 /* BBStaticVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBStaticVar.swift; sourceTree = "<group>"; };
+		528759031E39C582003A87E0 /* BBHealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBHealthKitManager.swift; sourceTree = "<group>"; };
+		528759091E39CA99003A87E0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		5287590B1E39CAA1003A87E0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		52B680791E4C0D7F00C721FF /* BBExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBExtensions.swift; sourceTree = "<group>"; };
+		52B6807D1E4C0E5600C721FF /* BBMainWaterIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBMainWaterIC.swift; sourceTree = "<group>"; };
+		52CA424E1E2F24570038EE33 /* 身体的水.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "身体的水.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52CA42511E2F24570038EE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52CA42561E2F24570038EE33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52CA42581E2F24570038EE33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52CA425B1E2F24570038EE33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52CA425D1E2F24570038EE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CA42601E2F24570038EE33 /* 身体的水 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "身体的水 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52CA42661E2F24570038EE33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		52CA42681E2F24570038EE33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52CA426A1E2F24570038EE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CA426F1E2F24580038EE33 /* 身体的水 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "身体的水 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52CA42751E2F24580038EE33 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		52CA42781E2F24580038EE33 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		52CA427A1E2F24580038EE33 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		52CA427C1E2F24580038EE33 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		52CA427E1E2F24580038EE33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52CA42801E2F24580038EE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CA428E1E2F2B0A0038EE33 /* BBSettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBSettingVC.swift; sourceTree = "<group>"; };
+		52CA42D91E2F308D0038EE33 /* BBMainIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBMainIC.swift; sourceTree = "<group>"; };
+		52CA42DB1E2F35350038EE33 /* BBConnectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBConnectModel.swift; sourceTree = "<group>"; };
+		75AC11378F1C1646AEF32096 /* Pods-身体的水.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-身体的水.release.xcconfig"; path = "Pods/Target Support Files/Pods-身体的水/Pods-身体的水.release.xcconfig"; sourceTree = "<group>"; };
+		A344644BA0C837A872F909D4 /* Pods______Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______Today.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3B270F48D5BDBA4669F08D5 /* Pods-身体的水 Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-身体的水 Today.release.xcconfig"; path = "Pods/Target Support Files/Pods-身体的水 Today/Pods-身体的水 Today.release.xcconfig"; sourceTree = "<group>"; };
+		CF5269AA9E085E206414AAE4 /* Pods-身体的水 Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-身体的水 Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-身体的水 Today/Pods-身体的水 Today.debug.xcconfig"; sourceTree = "<group>"; };
+		E567B3A9919BC50391728BF7 /* Pods-身体的水.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-身体的水.debug.xcconfig"; path = "Pods/Target Support Files/Pods-身体的水/Pods-身体的水.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3324A04CE2AC753AF9CE942E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5253240B1E3044D800A69872 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5287590C1E39CAA1003A87E0 /* HealthKit.framework in Frameworks */,
+				525324111E3044D800A69872 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CA424B1E2F24570038EE33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D6A3B7055BB02C3C43ACA6F /* Pods_____.framework in Frameworks */,
+				5287590D1E39CAAE003A87E0 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CA426C1E2F24580038EE33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5287590A1E39CA99003A87E0 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		521378111E36054C00B7D561 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				521378121E36054C00B7D561 /* Source */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		521378121E36054C00B7D561 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				521378131E36054C00B7D561 /* FaveButton.swift */,
+				521378141E36054C00B7D561 /* FaveIcon.swift */,
+				521378151E36054C00B7D561 /* Helpers */,
+				5213781A1E36054C00B7D561 /* Ring.swift */,
+				5213781B1E36054C00B7D561 /* Spark.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		521378151E36054C00B7D561 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				521378161E36054C00B7D561 /* Constraints+.swift */,
+				521378171E36054C00B7D561 /* Easing.swift */,
+				521378181E36054C00B7D561 /* Geometry.swift */,
+				521378191E36054C00B7D561 /* Init.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5253240F1E3044D800A69872 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5287590B1E39CAA1003A87E0 /* HealthKit.framework */,
+				528759091E39CA99003A87E0 /* HealthKit.framework */,
+				5213780E1E3601AF00B7D561 /* FaveButton.framework */,
+				525324101E3044D800A69872 /* NotificationCenter.framework */,
+				2057D251D541151E45FA8EA6 /* Pods_____.framework */,
+				A344644BA0C837A872F909D4 /* Pods______Today.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		525324121E3044D800A69872 /* 身体的水 Today */ = {
+			isa = PBXGroup;
+			children = (
+				525324201E30462B00A69872 /* 身体的水 Today.entitlements */,
+				525324131E3044D800A69872 /* TodayViewController.swift */,
+				525324151E3044D800A69872 /* MainInterface.storyboard */,
+				525324181E3044D800A69872 /* Info.plist */,
+			);
+			path = "身体的水 Today";
+			sourceTree = "<group>";
+		};
+		525324291E30AE1400A69872 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				525324261E306CA100A69872 /* BBSettingDataModel.swift */,
+				525324221E3068B300A69872 /* BBConnectDataModel.swift */,
+				525324241E3069AC00A69872 /* BBNotificationModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		525324321E30B07700A69872 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52CA428E1E2F2B0A0038EE33 /* BBSettingVC.swift */,
+				525324361E30B2CA00A69872 /* BBNoticeSettingVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		525324331E30B07E00A69872 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5253242A1E30AEC300A69872 /* BBBeginTimePicker.swift */,
+				525324341E30B26700A69872 /* BBBeginTimePicker.xib */,
+				5253242C1E30AED300A69872 /* BBEndTimePicker.swift */,
+				525324381E30C39E00A69872 /* BBEndTimePicker.xib */,
+				5253242E1E30AF9B00A69872 /* BBFrequencyTimePicker.swift */,
+				5253243A1E30C47500A69872 /* BBFrequencyTimePicker.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		528758FE1E39C516003A87E0 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				528758FF1E39C534003A87E0 /* BBStaticVar.swift */,
+				523781991E4C1D680095C713 /* BBExtensions.swift */,
+				528759031E39C582003A87E0 /* BBHealthKitManager.swift */,
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
+		52CA42451E2F24570038EE33 = {
+			isa = PBXGroup;
+			children = (
+				528758FE1E39C516003A87E0 /* Static */,
+				521378111E36054C00B7D561 /* Vender */,
+				52CA42501E2F24570038EE33 /* 身体的水 */,
+				52CA42641E2F24570038EE33 /* 身体的水 WatchKit App */,
+				52CA42731E2F24580038EE33 /* 身体的水 WatchKit Extension */,
+				525324121E3044D800A69872 /* 身体的水 Today */,
+				5253240F1E3044D800A69872 /* Frameworks */,
+				52CA424F1E2F24570038EE33 /* Products */,
+				70AB58B6346D20BAC65633CD /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		52CA424F1E2F24570038EE33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52CA424E1E2F24570038EE33 /* 身体的水.app */,
+				52CA42601E2F24570038EE33 /* 身体的水 WatchKit App.app */,
+				52CA426F1E2F24580038EE33 /* 身体的水 WatchKit Extension.appex */,
+				5253240E1E3044D800A69872 /* 身体的水 Today.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52CA42501E2F24570038EE33 /* 身体的水 */ = {
+			isa = PBXGroup;
+			children = (
+				525324211E30483D00A69872 /* 身体的水.entitlements */,
+				52CA42511E2F24570038EE33 /* AppDelegate.swift */,
+				525324321E30B07700A69872 /* Controller */,
+				525324331E30B07E00A69872 /* View */,
+				525324291E30AE1400A69872 /* Model */,
+				52CA42551E2F24570038EE33 /* Main.storyboard */,
+				52CA42581E2F24570038EE33 /* Assets.xcassets */,
+				52CA425A1E2F24570038EE33 /* LaunchScreen.storyboard */,
+				52CA425D1E2F24570038EE33 /* Info.plist */,
+				525324421E31A4CE00A69872 /* 身体的水-Bridging-Header.h */,
+			);
+			path = "身体的水";
+			sourceTree = "<group>";
+		};
+		52CA42641E2F24570038EE33 /* 身体的水 WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				5253243C1E318D5000A69872 /* 身体的水 WatchKit App.entitlements */,
+				52CA42651E2F24570038EE33 /* Interface.storyboard */,
+				52CA42681E2F24570038EE33 /* Assets.xcassets */,
+				52CA426A1E2F24570038EE33 /* Info.plist */,
+			);
+			path = "身体的水 WatchKit App";
+			sourceTree = "<group>";
+		};
+		52CA42731E2F24580038EE33 /* 身体的水 WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5253243D1E318D5B00A69872 /* 身体的水 WatchKit Extension.entitlements */,
+				52CA42D91E2F308D0038EE33 /* BBMainIC.swift */,
+				52B6807D1E4C0E5600C721FF /* BBMainWaterIC.swift */,
+				523781971E4C0F2B0095C713 /* BBDrinkIC.swift */,
+				52CA42DB1E2F35350038EE33 /* BBConnectModel.swift */,
+				52B680791E4C0D7F00C721FF /* BBExtensions.swift */,
+				52CA42781E2F24580038EE33 /* ExtensionDelegate.swift */,
+				52CA427A1E2F24580038EE33 /* NotificationController.swift */,
+				52CA427C1E2F24580038EE33 /* ComplicationController.swift */,
+				52CA427E1E2F24580038EE33 /* Assets.xcassets */,
+				52CA42801E2F24580038EE33 /* Info.plist */,
+				52CA42741E2F24580038EE33 /* Supporting Files */,
+			);
+			path = "身体的水 WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		52CA42741E2F24580038EE33 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52CA42751E2F24580038EE33 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70AB58B6346D20BAC65633CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E567B3A9919BC50391728BF7 /* Pods-身体的水.debug.xcconfig */,
+				75AC11378F1C1646AEF32096 /* Pods-身体的水.release.xcconfig */,
+				CF5269AA9E085E206414AAE4 /* Pods-身体的水 Today.debug.xcconfig */,
+				A3B270F48D5BDBA4669F08D5 /* Pods-身体的水 Today.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5253240D1E3044D800A69872 /* 身体的水 Today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5253241C1E3044D800A69872 /* Build configuration list for PBXNativeTarget "身体的水 Today" */;
+			buildPhases = (
+				9B62D973CF5E288056DB4F9A /* [CP] Check Pods Manifest.lock */,
+				5253240A1E3044D800A69872 /* Sources */,
+				5253240B1E3044D800A69872 /* Frameworks */,
+				5253240C1E3044D800A69872 /* Resources */,
+				40D556FF680B9FF7785F6C52 /* [CP] Embed Pods Frameworks */,
+				D50E7976F493949735CB1ADD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "身体的水 Today";
+			productName = "身体的水 Today";
+			productReference = 5253240E1E3044D800A69872 /* 身体的水 Today.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		52CA424D1E2F24570038EE33 /* 身体的水 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52CA428B1E2F24580038EE33 /* Build configuration list for PBXNativeTarget "身体的水" */;
+			buildPhases = (
+				615B5870AFC7FDE4A8DDBF2F /* [CP] Check Pods Manifest.lock */,
+				52CA424A1E2F24570038EE33 /* Sources */,
+				52CA424B1E2F24570038EE33 /* Frameworks */,
+				52CA424C1E2F24570038EE33 /* Resources */,
+				52CA428A1E2F24580038EE33 /* Embed Watch Content */,
+				5253241F1E3044D800A69872 /* Embed App Extensions */,
+				DEB18ECC84CB265A1063589B /* [CP] Embed Pods Frameworks */,
+				3959CB1EF2BA36C0103DB35C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52CA42631E2F24570038EE33 /* PBXTargetDependency */,
+				5253241A1E3044D800A69872 /* PBXTargetDependency */,
+			);
+			name = "身体的水";
+			productName = "身体的水";
+			productReference = 52CA424E1E2F24570038EE33 /* 身体的水.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52CA425F1E2F24570038EE33 /* 身体的水 WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52CA42871E2F24580038EE33 /* Build configuration list for PBXNativeTarget "身体的水 WatchKit App" */;
+			buildPhases = (
+				52CA425E1E2F24570038EE33 /* Resources */,
+				52CA42861E2F24580038EE33 /* Embed App Extensions */,
+				3324A04CE2AC753AF9CE942E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52CA42721E2F24580038EE33 /* PBXTargetDependency */,
+			);
+			name = "身体的水 WatchKit App";
+			productName = "身体的水 WatchKit App";
+			productReference = 52CA42601E2F24570038EE33 /* 身体的水 WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		52CA426E1E2F24580038EE33 /* 身体的水 WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52CA42831E2F24580038EE33 /* Build configuration list for PBXNativeTarget "身体的水 WatchKit Extension" */;
+			buildPhases = (
+				52CA426B1E2F24580038EE33 /* Sources */,
+				52CA426C1E2F24580038EE33 /* Frameworks */,
+				52CA426D1E2F24580038EE33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "身体的水 WatchKit Extension";
+			productName = "身体的水 WatchKit Extension";
+			productReference = 52CA426F1E2F24580038EE33 /* 身体的水 WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52CA42461E2F24570038EE33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Binhan Bai";
+				TargetAttributes = {
+					5253240D1E3044D800A69872 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7LE9R3HGR7;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+						};
+					};
+					52CA424D1E2F24570038EE33 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7LE9R3HGR7;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+					52CA425F1E2F24570038EE33 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7LE9R3HGR7;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					52CA426E1E2F24580038EE33 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7LE9R3HGR7;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 52CA42491E2F24570038EE33 /* Build configuration list for PBXProject "身体的水" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52CA42451E2F24570038EE33;
+			productRefGroup = 52CA424F1E2F24570038EE33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52CA424D1E2F24570038EE33 /* 身体的水 */,
+				52CA425F1E2F24570038EE33 /* 身体的水 WatchKit App */,
+				52CA426E1E2F24580038EE33 /* 身体的水 WatchKit Extension */,
+				5253240D1E3044D800A69872 /* 身体的水 Today */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5253240C1E3044D800A69872 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				525324281E30A45800A69872 /* Assets.xcassets in Resources */,
+				525324171E3044D800A69872 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CA424C1E2F24570038EE33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				525324351E30B26700A69872 /* BBBeginTimePicker.xib in Resources */,
+				52CA425C1E2F24570038EE33 /* LaunchScreen.storyboard in Resources */,
+				525324391E30C39F00A69872 /* BBEndTimePicker.xib in Resources */,
+				52CA42591E2F24570038EE33 /* Assets.xcassets in Resources */,
+				52CA42571E2F24570038EE33 /* Main.storyboard in Resources */,
+				5253243B1E30C47500A69872 /* BBFrequencyTimePicker.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CA425E1E2F24570038EE33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52CA42691E2F24570038EE33 /* Assets.xcassets in Resources */,
+				52CA42671E2F24570038EE33 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CA426D1E2F24580038EE33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52CA427F1E2F24580038EE33 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3959CB1EF2BA36C0103DB35C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-身体的水/Pods-身体的水-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40D556FF680B9FF7785F6C52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-身体的水 Today/Pods-身体的水 Today-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		615B5870AFC7FDE4A8DDBF2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B62D973CF5E288056DB4F9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D50E7976F493949735CB1ADD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-身体的水 Today/Pods-身体的水 Today-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEB18ECC84CB265A1063589B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-身体的水/Pods-身体的水-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5253240A1E3044D800A69872 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521378251E36058500B7D561 /* FaveIcon.swift in Sources */,
+				528759021E39C53C003A87E0 /* BBStaticVar.swift in Sources */,
+				521378291E36058B00B7D561 /* Init.swift in Sources */,
+				521378281E36058B00B7D561 /* Geometry.swift in Sources */,
+				525324141E3044D800A69872 /* TodayViewController.swift in Sources */,
+				528759061E39C8F2003A87E0 /* BBHealthKitManager.swift in Sources */,
+				521378271E36058B00B7D561 /* Easing.swift in Sources */,
+				521378241E36057400B7D561 /* FaveButton.swift in Sources */,
+				521378261E36058B00B7D561 /* Constraints+.swift in Sources */,
+				5213782A1E36058B00B7D561 /* Ring.swift in Sources */,
+				5213782B1E36058B00B7D561 /* Spark.swift in Sources */,
+				5225194F1E44108300427AE2 /* BBSettingDataModel.swift in Sources */,
+				5237819C1E4C1D730095C713 /* BBExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CA424A1E2F24570038EE33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5213781F1E36054C00B7D561 /* Easing.swift in Sources */,
+				5237819B1E4C1D710095C713 /* BBExtensions.swift in Sources */,
+				5253242D1E30AED300A69872 /* BBEndTimePicker.swift in Sources */,
+				521378231E36054C00B7D561 /* Spark.swift in Sources */,
+				528759001E39C534003A87E0 /* BBStaticVar.swift in Sources */,
+				525324371E30B2CA00A69872 /* BBNoticeSettingVC.swift in Sources */,
+				521378221E36054C00B7D561 /* Ring.swift in Sources */,
+				521378201E36054C00B7D561 /* Geometry.swift in Sources */,
+				5253242F1E30AF9B00A69872 /* BBFrequencyTimePicker.swift in Sources */,
+				5213781D1E36054C00B7D561 /* FaveIcon.swift in Sources */,
+				525324271E306CA100A69872 /* BBSettingDataModel.swift in Sources */,
+				525324251E3069AC00A69872 /* BBNotificationModel.swift in Sources */,
+				528759041E39C582003A87E0 /* BBHealthKitManager.swift in Sources */,
+				521378211E36054C00B7D561 /* Init.swift in Sources */,
+				5253242B1E30AEC300A69872 /* BBBeginTimePicker.swift in Sources */,
+				52CA42521E2F24570038EE33 /* AppDelegate.swift in Sources */,
+				52CA428F1E2F2B0A0038EE33 /* BBSettingVC.swift in Sources */,
+				5213781E1E36054C00B7D561 /* Constraints+.swift in Sources */,
+				525324231E3068B300A69872 /* BBConnectDataModel.swift in Sources */,
+				5213781C1E36054C00B7D561 /* FaveButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52CA426B1E2F24580038EE33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B6807E1E4C0E5600C721FF /* BBMainWaterIC.swift in Sources */,
+				522519501E4410CF00427AE2 /* BBSettingDataModel.swift in Sources */,
+				52CA427B1E2F24580038EE33 /* NotificationController.swift in Sources */,
+				52CA427D1E2F24580038EE33 /* ComplicationController.swift in Sources */,
+				52CA42DA1E2F308D0038EE33 /* BBMainIC.swift in Sources */,
+				528759011E39C53B003A87E0 /* BBStaticVar.swift in Sources */,
+				52CA42791E2F24580038EE33 /* ExtensionDelegate.swift in Sources */,
+				52CA42DC1E2F35350038EE33 /* BBConnectModel.swift in Sources */,
+				52B6807A1E4C0D7F00C721FF /* BBExtensions.swift in Sources */,
+				528759051E39C8EE003A87E0 /* BBHealthKitManager.swift in Sources */,
+				523781981E4C0F2B0095C713 /* BBDrinkIC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5253241A1E3044D800A69872 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5253240D1E3044D800A69872 /* 身体的水 Today */;
+			targetProxy = 525324191E3044D800A69872 /* PBXContainerItemProxy */;
+		};
+		52CA42631E2F24570038EE33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52CA425F1E2F24570038EE33 /* 身体的水 WatchKit App */;
+			targetProxy = 52CA42621E2F24570038EE33 /* PBXContainerItemProxy */;
+		};
+		52CA42721E2F24580038EE33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52CA426E1E2F24580038EE33 /* 身体的水 WatchKit Extension */;
+			targetProxy = 52CA42711E2F24580038EE33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		525324151E3044D800A69872 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				525324161E3044D800A69872 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		52CA42551E2F24570038EE33 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52CA42561E2F24570038EE33 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52CA425A1E2F24570038EE33 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52CA425B1E2F24570038EE33 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		52CA42651E2F24570038EE33 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52CA42661E2F24570038EE33 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5253241D1E3044D800A69872 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF5269AA9E085E206414AAE4 /* Pods-身体的水 Today.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "身体的水 Today/身体的水 Today.entitlements";
+				DEVELOPMENT_TEAM = 7LE9R3HGR7;
+				INFOPLIST_FILE = "身体的水 Today/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iceFrozen.waterOfLife.Today;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5253241E1E3044D800A69872 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3B270F48D5BDBA4669F08D5 /* Pods-身体的水 Today.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "身体的水 Today/身体的水 Today.entitlements";
+				DEVELOPMENT_TEAM = 7LE9R3HGR7;
+				INFOPLIST_FILE = "身体的水 Today/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iceFrozen.waterOfLife.Today;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		52CA42811E2F24580038EE33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52CA42821E2F24580038EE33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52CA42841E2F24580038EE33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "身体的水 WatchKit Extension/身体的水 WatchKit Extension.entitlements";
+				DEVELOPMENT_TEAM = 7LE9R3HGR7;
+				INFOPLIST_FILE = "身体的水 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iceFrozen.waterOfLife.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		52CA42851E2F24580038EE33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "身体的水 WatchKit Extension/身体的水 WatchKit Extension.entitlements";
+				DEVELOPMENT_TEAM = 7LE9R3HGR7;
+				INFOPLIST_FILE = "身体的水 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iceFrozen.waterOfLife.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		52CA42881E2F24580038EE33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7LE9R3HGR7;
+				IBSC_MODULE = "_____WatchKit_Extension";
+				INFOPLIST_FILE = "身体的水 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iceFrozen.waterOfLife.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		52CA42891E2F24580038EE33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7LE9R3HGR7;
+				IBSC_MODULE = "_____WatchKit_Extension";
+				INFOPLIST_FILE = "身体的水 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iceFrozen.waterOfLife.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		52CA428C1E2F24580038EE33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E567B3A9919BC50391728BF7 /* Pods-身体的水.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "身体的水/身体的水.entitlements";
+				DEVELOPMENT_TEAM = 7LE9R3HGR7;
+				INFOPLIST_FILE = "身体的水/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iceFrozen.waterOfLife;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "身体的水/身体的水-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+			};
+			name = Debug;
+		};
+		52CA428D1E2F24580038EE33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75AC11378F1C1646AEF32096 /* Pods-身体的水.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "身体的水/身体的水.entitlements";
+				DEVELOPMENT_TEAM = 7LE9R3HGR7;
+				INFOPLIST_FILE = "身体的水/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iceFrozen.waterOfLife;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "身体的水/身体的水-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5253241C1E3044D800A69872 /* Build configuration list for PBXNativeTarget "身体的水 Today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5253241D1E3044D800A69872 /* Debug */,
+				5253241E1E3044D800A69872 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52CA42491E2F24570038EE33 /* Build configuration list for PBXProject "身体的水" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52CA42811E2F24580038EE33 /* Debug */,
+				52CA42821E2F24580038EE33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52CA42831E2F24580038EE33 /* Build configuration list for PBXNativeTarget "身体的水 WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52CA42841E2F24580038EE33 /* Debug */,
+				52CA42851E2F24580038EE33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52CA42871E2F24580038EE33 /* Build configuration list for PBXNativeTarget "身体的水 WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52CA42881E2F24580038EE33 /* Debug */,
+				52CA42891E2F24580038EE33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52CA428B1E2F24580038EE33 /* Build configuration list for PBXNativeTarget "身体的水" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52CA428C1E2F24580038EE33 /* Debug */,
+				52CA428D1E2F24580038EE33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52CA42461E2F24570038EE33 /* Project object */;
+}
