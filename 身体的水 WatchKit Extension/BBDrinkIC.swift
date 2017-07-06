@@ -76,6 +76,7 @@ class BBDrinkIC: WKInterfaceController {
                 WKInterfaceDevice.current().play(WKHapticType.success)
             }
         }
+        BBConnectModel.sharedModel.reloadTimeLineData()
     }
     
     

@@ -12,6 +12,7 @@ import WatchKit
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Timeline Configuration
+    var oldNum: Int? = nil
     
     func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
         handler([.forward, .backward])
@@ -29,17 +30,34 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         handler(.showOnLockScreen)
     }
     
+    func requestedUpdateDidBegin() {
+        BBHealthKitManager.manager.getTotalDrinkCount { [weak self] (drinked, err) in
+            guard let strongSelf = self else { return }
+            if err != nil { return }
+            let left = BBSettingDataModel.sharedModel.calculateWaterNum() - Int(drinked)
+            if strongSelf.oldNum == nil || strongSelf.oldNum != left {
+                let server=CLKComplicationServer.sharedInstance()
+                for comp in (server.activeComplications)! {
+                    server.reloadTimeline(for: comp)
+                }
+            }
+        }
+    }
+    
+    func getNextRequestedUpdateDate(handler: @escaping (Date?) -> Void) {
+        let date = Date()
+        let timeInterval = TimeInterval.init(600)
+        let nextDate = Date.init(timeInterval: timeInterval, since: date)
+        handler(nextDate)
+    }
+    
     // MARK: - Timeline Population
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
-        // Call the handler with the current timeline entry
-//        let myDelegate = WKExtension.shared().delegate as! ExtensionDelegate
-        
         var entry : CLKComplicationTimelineEntry?
         let now = NSDate()
         
         BBHealthKitManager.manager.getTotalDrinkCount(completion: { (drinked, err) in
-//            guard let strongSelf = self else { return }
             if err != nil { return }
             let left = BBSettingDataModel.sharedModel.calculateWaterNum() - Int(drinked)
             

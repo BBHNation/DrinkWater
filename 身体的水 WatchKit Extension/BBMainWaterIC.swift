@@ -27,6 +27,9 @@ class BBMainWaterIC: WKInterfaceController {
         refreshData()
     }
     
+    @IBAction func refreshView() {
+        refreshData()
+    }
     private func refreshData() {
         BBHealthKitManager.manager.getTotalDrinkCount { [weak self] (drinked, err) in
             guard let strongSelf = self else { return }
@@ -37,6 +40,7 @@ class BBMainWaterIC: WKInterfaceController {
                 strongSelf.backCircleGroup.setBackgroundImage(strongSelf.drewImage.DrewCicle(percent: percent))
                 strongSelf.currentPercent = percent
                 strongSelf.leftWaterLabel.setText(String.init(format: "%d", BBSettingDataModel.sharedModel.calculateWaterNum() - Int(drinked)))
+                BBConnectModel.sharedModel.reloadTimeLineData()
             }
         }
     }

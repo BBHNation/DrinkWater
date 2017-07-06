@@ -147,6 +147,15 @@
                             <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="0.0" colorSpace="calibratedRGB"/>
                         </group>
                     </items>
+                    <menu key="menu" id="YPK-iO-gJe">
+                        <items>
+                            <menuItem title="刷新" icon="resume" id="0mq-9w-mbW">
+                                <connections>
+                                    <action selector="refreshView" destination="ru0-NW-OlY" id="PCn-oM-UYy"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="0.0" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="backCircleGroup" destination="Gos-iN-qu7" id="CXX-DM-GjY"/>
