@@ -47,44 +47,19 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     
-    /// 通过UserDefaults获取喝一杯水的量
-    ///
-    /// - Returns: 返回Int一杯水的毫升数
-    private func getCupDrink() -> Int {
-        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
-        if dataUserDefaults?.bool(forKey: IS_SETED_MAIN_SETTING) == true {
-            return (dataUserDefaults?.integer(forKey: CUP_DRINK))!
-        }
-        else {
-            return 300
-        }
-    }
-    
-    
-    /// 通过UserDefaults获取喝一口水的量
-    ///
-    /// - Returns: 返回Int一口水的量
-    private func getLittleDrink() -> Int {
-        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
-        if dataUserDefaults?.bool(forKey: IS_SETED_MAIN_SETTING) == true {
-            return (dataUserDefaults?.integer(forKey: LITTLE_DRINK))!
-        }
-        else {
-            return 30
-        }
-    }
+
     
     
     /// 点击按钮，喝一杯水
     @IBAction func drinkOneCup(_ sender: Any) {
         cupButton.isSelected = true
-        changeLocalNum(waterNum: getCupDrink())
+        changeLocalNum(waterNum: BBSettingDataModel.sharedModel.getCupDrink())
     }
     
     /// 点击按钮，喝一口水
     @IBAction func drinkLittle(_ sender: Any) {
         littleButton.isSelected = true
-        changeLocalNum(waterNum: getLittleDrink())
+        changeLocalNum(waterNum: BBSettingDataModel.sharedModel.getLittleDrink())
     }
     
     
@@ -107,7 +82,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     ///   - endNum: 终止为多少水
     private func changeNumAnimatly(_ beginNum : Int, endNum : Int) {
         var sub = 1
-        if (beginNum-endNum) >= getCupDrink() {
+        if (beginNum-endNum) >= BBSettingDataModel.sharedModel.getCupDrink() {
             // 设置步长
             sub = 10
         }
@@ -117,7 +92,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             if begin != endNum {
                 begin = begin - sub
                 self.waterNumLabel.text = "\(abs(begin))"
-                self.waterCupLabel.text = String.init(format: "%.1f", ((Double(abs(begin))/Double(self.getCupDrink()))))
+                self.waterCupLabel.text = String.init(format: "%.1f", ((Double(abs(begin))/Double(BBSettingDataModel.sharedModel.getCupDrink()))))
             }
             else {
                 // 修改圆圈
@@ -177,7 +152,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                     let left = strongSelf.totalWaterToDrink - Int(drinked)
                     strongSelf.leftWater = left
                     strongSelf.waterNumLabel.text = "\(abs(left))"
-                    strongSelf.waterCupLabel.text = String.init(format: "%.1f", Double(abs(left))/Double(strongSelf.getCupDrink()))
+                    strongSelf.waterCupLabel.text = String.init(format: "%.1f", Double(abs(left))/Double(BBSettingDataModel.sharedModel.getCupDrink()))
                     strongSelf.noticeLabel.text = "点击按钮\n记录喝水"
                     if percent >= 1 {
                         strongSelf.noticeLabel.text = "恭喜你！\n完成任务"

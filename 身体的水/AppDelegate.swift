@@ -17,18 +17,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        
-        
+        UNUserNotificationCenter.current().delegate = self
         return true
     }
+    
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         //应用内展示
-        print("hello,应用内展示")
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print("hello,这里新建一个本地推送")
+        // 在这里处理通知回调用
+        let identity = response.actionIdentifier
+        if identity == drinkOneMouseIdentity {
+            print("喝一口水")
+            BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(BBSettingDataModel.sharedModel.getLittleDrink()))
+        } else if identity == drinkOneCupIdentity {
+            print("喝一杯水")
+            BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(BBSettingDataModel.sharedModel.getCupDrink()))
+        } else if identity == drinkCustomIdentity {
+            print("喝自定义量")
+            let text = (response as! UNTextInputNotificationResponse).userText
+            let numString = text.trimmingCharacters(in: .decimalDigits) as NSString
+            if numString.length < 0 {
+                // 都是数字
+                BBHealthKitManager.manager.writeDataWithWater(waterNum: numString.doubleValue)
+            } else {
+                // 没有数字
+                // 不处理
+            }
+        }
+        
+        completionHandler()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -15,8 +15,8 @@ extension WKInterfaceImage {
         // 圆心
         let r = 200 // 半径
         
-        let finalX = Double(x) + Double(r)*sin(percent*360*(M_PI)/180)
-        let finalY = Double(y) - Double(r)*cos(percent*360*(M_PI)/180)
+        let finalX = Double(x) + Double(r)*sin(percent*360*(Double.pi)/180)
+        let finalY = Double(y) - Double(r)*cos(percent*360*(Double.pi)/180)
         
         UIGraphicsBeginImageContextWithOptions(CGSize.init(width: 500, height: 500), false, 0)
         //do some draw ...
@@ -44,7 +44,7 @@ extension WKInterfaceImage {
         //// Oval 4 Drawing
         let oval4Rect = CGRect.init(x: 50, y: 50, width: 400, height: 400)
         let oval4Path = UIBezierPath()
-        oval4Path.addArc(withCenter: CGPoint.init(x: oval4Rect.midX, y: oval4Rect.midY), radius: oval4Rect.width / 2, startAngle: -90 * CGFloat(M_PI)/180, endAngle: (CGFloat(percent * 360) - 90.0) * CGFloat(M_PI)/180, clockwise: true)
+        oval4Path.addArc(withCenter: CGPoint.init(x: oval4Rect.midX, y: oval4Rect.midY), radius: oval4Rect.width / 2, startAngle: -90 * CGFloat(Double.pi)/180, endAngle: (CGFloat(percent * 360) - 90.0) * CGFloat(Double.pi)/180, clockwise: true)
         
         color2.setStroke()
         oval4Path.lineWidth = 40

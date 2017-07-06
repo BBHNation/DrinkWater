@@ -75,4 +75,32 @@ class BBSettingDataModel: NSObject {
         
         return waterNum
     }
+    
+    
+    /// 通过UserDefaults获取喝一杯水的量
+    ///
+    /// - Returns: 返回Int一杯水的毫升数
+    public func getCupDrink() -> Int {
+        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        if dataUserDefaults?.bool(forKey: IS_SETED_MAIN_SETTING) == true {
+            return (dataUserDefaults?.integer(forKey: CUP_DRINK))!
+        }
+        else {
+            return 300
+        }
+    }
+    
+    
+    /// 通过UserDefaults获取喝一口水的量
+    ///
+    /// - Returns: 返回Int一口水的量
+    public func getLittleDrink() -> Int {
+        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        if dataUserDefaults?.bool(forKey: IS_SETED_MAIN_SETTING) == true {
+            return (dataUserDefaults?.integer(forKey: LITTLE_DRINK))!
+        }
+        else {
+            return 30
+        }
+    }
 }
