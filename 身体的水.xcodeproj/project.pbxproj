@@ -25,8 +25,6 @@
 		5213782A1E36058B00B7D561 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213781A1E36054C00B7D561 /* Ring.swift */; };
 		5213782B1E36058B00B7D561 /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213781B1E36054C00B7D561 /* Spark.swift */; };
 		521E57571F0CC9E300547BC9 /* BBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E57561F0CC9E300547BC9 /* BBExtensions.swift */; };
-		5225194F1E44108300427AE2 /* BBSettingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525324261E306CA100A69872 /* BBSettingDataModel.swift */; };
-		522519501E4410CF00427AE2 /* BBSettingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525324261E306CA100A69872 /* BBSettingDataModel.swift */; };
 		523781981E4C0F2B0095C713 /* BBDrinkIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523781971E4C0F2B0095C713 /* BBDrinkIC.swift */; };
 		5237819B1E4C1D710095C713 /* BBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523781991E4C1D680095C713 /* BBExtensions.swift */; };
 		5237819C1E4C1D730095C713 /* BBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523781991E4C1D680095C713 /* BBExtensions.swift */; };
@@ -746,7 +744,6 @@
 				521378261E36058B00B7D561 /* Constraints+.swift in Sources */,
 				5213782A1E36058B00B7D561 /* Ring.swift in Sources */,
 				5213782B1E36058B00B7D561 /* Spark.swift in Sources */,
-				5225194F1E44108300427AE2 /* BBSettingDataModel.swift in Sources */,
 				5237819C1E4C1D730095C713 /* BBExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -784,7 +781,6 @@
 			files = (
 				52B6807E1E4C0E5600C721FF /* BBMainWaterIC.swift in Sources */,
 				521E57571F0CC9E300547BC9 /* BBExtensions.swift in Sources */,
-				522519501E4410CF00427AE2 /* BBSettingDataModel.swift in Sources */,
 				52CA427B1E2F24580038EE33 /* NotificationController.swift in Sources */,
 				52CA427D1E2F24580038EE33 /* ComplicationController.swift in Sources */,
 				52CA42DA1E2F308D0038EE33 /* BBMainIC.swift in Sources */,

@@ -139,6 +139,20 @@ class BBConnectModel: NSObject,WCSessionDelegate {
             reloadTimeLineData()
             replyHandler(["good":"good"])
         }
+        
+        guard let code = message["code"] as! Int? else { return }
+        if code == 1024 {
+            reloadTimeLineData()
+        }
+        else if code == 1025 {
+            let cupDrink: Int? = (message["content"] as? Dictionary)?[CUP_DRINK]
+            let littleDrink: Int? = (message["content"] as? Dictionary)?[LITTLE_DRINK]
+            let age: Int? = (message["content"] as? Dictionary)?["age"]
+            UserDefaults.standard.set(cupDrink, forKey: CUP_DRINK)
+            UserDefaults.standard.set(littleDrink, forKey: LITTLE_DRINK)
+            UserDefaults.standard.set(age, forKey: "age")
+            UserDefaults.standard.synchronize()
+        }
     }
     
 }

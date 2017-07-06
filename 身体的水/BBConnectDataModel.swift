@@ -12,13 +12,12 @@ import SVProgressHUD
 
 class BBConnectDataModel: NSObject, WCSessionDelegate{
     static let sharedModel = BBConnectDataModel()
-    
+    let session = WCSession.default()
     override init(){}
     
     /// 初始化后设置Session
     public func setSession() {
         if WCSession.isSupported() {
-            let session = WCSession.default()
             session.delegate = self
             session.activate()
         }
@@ -41,7 +40,6 @@ class BBConnectDataModel: NSObject, WCSessionDelegate{
     /// - Parameter dic: 向Watch发送消息，消息格式是 [String : Any]
     public func sendMessage(dic : [String:Any]) {
         SVProgressHUD.show(withStatus: "传输中")
-        let session = WCSession.default()
         session.sendMessage(dic, replyHandler: { (replyDic) in
             print("成功返回")
             SVProgressHUD.showSuccess(withStatus: "传输成功")

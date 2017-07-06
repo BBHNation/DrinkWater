@@ -111,7 +111,7 @@ class BBSettingVC: UITableViewController{
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 3 {
-            let count = BBSettingDataModel.sharedModel.calculateWaterNum()
+            let count = calculateWaterNum()
             BBConnectDataModel.sharedModel.saveWaterLeftData(value: count)
             SVProgressHUD.showInfo(withStatus: "今日应喝\(count)毫升水")
             BBSettingDataModel.sharedModel.saveDataToUserDefalt()

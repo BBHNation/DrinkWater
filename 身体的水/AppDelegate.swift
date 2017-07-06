@@ -30,10 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let identity = response.actionIdentifier
         if identity == drinkOneMouseIdentity {
             print("喝一口水")
-            BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(BBSettingDataModel.sharedModel.getLittleDrink())/1000)
+            BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(getLittleDrink())/1000)
         } else if identity == drinkOneCupIdentity {
             print("喝一杯水")
-            BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(BBSettingDataModel.sharedModel.getCupDrink())/1000)
+            BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(getCupDrink())/1000)
         } else if identity == drinkCustomIdentity {
             print("喝自定义量")
             let text = (response as! UNTextInputNotificationResponse).userText
@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 // 不处理
             }
         }
+        BBConnectDataModel.sharedModel.sendMessage(dic: ["code":1024,"content":"reloadComplication"])
         
         completionHandler()
     }

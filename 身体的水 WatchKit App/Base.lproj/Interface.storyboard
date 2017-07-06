@@ -161,6 +161,7 @@
                         <outlet property="backCircleGroup" destination="Gos-iN-qu7" id="CXX-DM-GjY"/>
                         <outlet property="drewImage" destination="t9Z-hK-xys" id="heg-w9-GXy"/>
                         <outlet property="leftWaterLabel" destination="ANi-oP-KRS" id="A1K-OU-IQ0"/>
+                        <outlet property="noticeLabel" destination="cJI-kK-TET" id="pqV-06-YZP"/>
                         <segue destination="KDM-84-8JY" kind="relationship" relationship="nextPage" id="r1h-EM-x1f"/>
                     </connections>
                 </controller>

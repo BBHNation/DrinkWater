@@ -64,11 +64,85 @@ class refreshModel : NSObject{
             else {
                 // 不相同，则修改日期，并刷新数据
                 // final 是计算model计算出来的
-                let final = BBSettingDataModel.sharedModel.calculateWaterNum()
+                let final = calculateWaterNum()
                 dataUserDefaults?.set(final, forKey: LEFT_WATER_NUM)
                 dataUserDefaults?.set(Date(), forKey: SHARED_DATE)
                 dataUserDefaults?.synchronize()
             }
         }
     }
+    
+    
+
+}
+
+/// 根据人体数据来计算一天的喝水量，以后会加入天气情况
+///
+/// - Returns: 返回一天的喝水量
+public func calculateWaterNum() -> Int{
+    
+    var waterNum = 1300
+#if os(iOS)
+    let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+    let age: Int? = dataUserDefaults?.value(forKey: "age") as! Int?
+#elseif os(watchOS)
+    let dataUserDefaults = UserDefaults.standard
+    let age: Int? = dataUserDefaults.value(forKey: "age") as! Int?
+#endif
+    if age == nil {
+        return waterNum
+    }
+    else if age! >= 10 && age! <= 40 {
+        waterNum = waterNum + 300
+    }else {
+        waterNum = waterNum + 500
+    }
+    return waterNum
+}
+
+/// 通过UserDefaults获取喝一杯水的量
+///
+/// - Returns: 返回Int一杯水的毫升数
+public func getCupDrink() -> Int {
+    #if os(iOS)
+        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        if dataUserDefaults?.bool(forKey: IS_SETED_MAIN_SETTING) == true {
+            return (dataUserDefaults!.integer(forKey: CUP_DRINK))
+        }
+        else {
+            return 300
+        }
+    #elseif os(watchOS)
+        let dataUserDefaults = UserDefaults.standard
+        if dataUserDefaults.bool(forKey: IS_SETED_MAIN_SETTING) == true {
+            return (dataUserDefaults.integer(forKey: CUP_DRINK))
+        }
+        else {
+            return 300
+        }
+    #endif
+}
+
+
+/// 通过UserDefaults获取喝一口水的量
+///
+/// - Returns: 返回Int一口水的量
+public func getLittleDrink() -> Int {
+    #if os(iOS)
+        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        if dataUserDefaults?.bool(forKey: IS_SETED_MAIN_SETTING) == true {
+            return (dataUserDefaults!.integer(forKey: LITTLE_DRINK))
+        }
+        else {
+            return 30
+        }
+    #elseif os(watchOS)
+        let dataUserDefaults = UserDefaults.standard
+        if dataUserDefaults.bool(forKey: IS_SETED_MAIN_SETTING) == true {
+            return (dataUserDefaults.integer(forKey: LITTLE_DRINK))
+        }
+        else {
+            return 30
+        }
+    #endif
 }

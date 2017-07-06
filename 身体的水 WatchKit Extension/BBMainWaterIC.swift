@@ -15,6 +15,8 @@ class BBMainWaterIC: WKInterfaceController {
     @IBOutlet var drewImage: WKInterfaceImage!
     @IBOutlet var backCircleGroup: WKInterfaceGroup!
     @IBOutlet var leftWaterLabel: WKInterfaceLabel!
+    @IBOutlet var noticeLabel : WKInterfaceLabel!
+    
     var currentPercent: Double = 0.0
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -23,6 +25,7 @@ class BBMainWaterIC: WKInterfaceController {
 
     override func willActivate() {
         super.willActivate()
+        BBConnectModel.sharedModel.setSession();
         // 这里做判断，如果数据没变则不动，数据变了则重新绘图
         refreshData()
     }
@@ -34,12 +37,15 @@ class BBMainWaterIC: WKInterfaceController {
         BBHealthKitManager.manager.getTotalDrinkCount { [weak self] (drinked, err) in
             guard let strongSelf = self else { return }
             if err != nil { return }
-            let percent = drinked / Double(BBSettingDataModel.sharedModel.calculateWaterNum())
+            let percent = drinked / Double(calculateWaterNum())
             if percent != 0 && percent == strongSelf.currentPercent { return }
             DispatchQueue.main.async {
                 strongSelf.backCircleGroup.setBackgroundImage(strongSelf.drewImage.DrewCicle(percent: percent))
                 strongSelf.currentPercent = percent
-                strongSelf.leftWaterLabel.setText(String.init(format: "%d", BBSettingDataModel.sharedModel.calculateWaterNum() - Int(drinked)))
+                strongSelf.leftWaterLabel.setText(String.init(format: "%d", abs(calculateWaterNum() - Int(drinked))))
+                if calculateWaterNum() - Int(drinked) < 0 {
+                    strongSelf.noticeLabel.setText("额外喝水")
+                }
                 BBConnectModel.sharedModel.reloadTimeLineData()
             }
         }

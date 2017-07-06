@@ -57,50 +57,14 @@ class BBSettingDataModel: NSObject {
         userDefault?.set(littleDrink, forKey: LITTLE_DRINK)
         userDefault?.set(true, forKey: IS_SETED_MAIN_SETTING)
         userDefault?.synchronize()
+        // 向WatchOS同步数据
+        BBConnectDataModel.sharedModel.setSession()
+        BBConnectDataModel.sharedModel.sendMessage(dic: ["code":1025,"content":[CUP_DRINK:cupDrink,LITTLE_DRINK:littleDrink,"age":age]])
     }
     
     
     
-    /// 根据人体数据来计算一天的喝水量，以后会加入天气情况
-    ///
-    /// - Returns: 返回一天的喝水量
-    public func calculateWaterNum() -> Int{
-        var waterNum = 1300
-        
-        if age>=10 && age<=40 {
-            waterNum = waterNum + 300
-        }else {
-            waterNum = waterNum + 500
-        }
-        
-        return waterNum
-    }
+
     
-    
-    /// 通过UserDefaults获取喝一杯水的量
-    ///
-    /// - Returns: 返回Int一杯水的毫升数
-    public func getCupDrink() -> Int {
-        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
-        if dataUserDefaults?.bool(forKey: IS_SETED_MAIN_SETTING) == true {
-            return (dataUserDefaults?.integer(forKey: CUP_DRINK))!
-        }
-        else {
-            return 300
-        }
-    }
-    
-    
-    /// 通过UserDefaults获取喝一口水的量
-    ///
-    /// - Returns: 返回Int一口水的量
-    public func getLittleDrink() -> Int {
-        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
-        if dataUserDefaults?.bool(forKey: IS_SETED_MAIN_SETTING) == true {
-            return (dataUserDefaults?.integer(forKey: LITTLE_DRINK))!
-        }
-        else {
-            return 30
-        }
-    }
+
 }

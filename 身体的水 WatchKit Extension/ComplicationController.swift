@@ -34,7 +34,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         BBHealthKitManager.manager.getTotalDrinkCount { [weak self] (drinked, err) in
             guard let strongSelf = self else { return }
             if err != nil { return }
-            let left = BBSettingDataModel.sharedModel.calculateWaterNum() - Int(drinked)
+            let left = calculateWaterNum() - Int(drinked)
             if strongSelf.oldNum == nil || strongSelf.oldNum != left {
                 let server=CLKComplicationServer.sharedInstance()
                 for comp in (server.activeComplications)! {
@@ -46,7 +46,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getNextRequestedUpdateDate(handler: @escaping (Date?) -> Void) {
         let date = Date()
-        let timeInterval = TimeInterval.init(600)
+        let timeInterval = TimeInterval.init(60)
         let nextDate = Date.init(timeInterval: timeInterval, since: date)
         handler(nextDate)
     }
@@ -59,12 +59,12 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         
         BBHealthKitManager.manager.getTotalDrinkCount(completion: { (drinked, err) in
             if err != nil { return }
-            let left = BBSettingDataModel.sharedModel.calculateWaterNum() - Int(drinked)
+            let left = calculateWaterNum() - Int(drinked)
             
             // Create the template and timeline entry.
             if complication.family == .modularSmall {
-                let longText = "\(left)"
-                let shortText = "\(left)"
+                let longText = left > 0 ? "\(left)" : "+\(abs(left))"
+                let shortText = left > 0 ? "\(left)" : "+\(abs(left))"
                 
                 let textTemplate = CLKComplicationTemplateModularSmallSimpleText()
                 textTemplate.textProvider = CLKSimpleTextProvider(text: longText, shortText: shortText)
@@ -72,8 +72,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
                 entry = CLKComplicationTimelineEntry(date: now as Date, complicationTemplate: textTemplate)
             }
             else if complication.family == .utilitarianSmall{
-                let longText = "\(left)"
-                let shortText = "\(left)"
+                let longText = left > 0 ? "\(left)" : "+\(abs(left))"
+                let shortText = left > 0 ? "\(left)" : "+\(abs(left))"
                 
                 let textTemplate = CLKComplicationTemplateUtilitarianSmallFlat()
                 textTemplate.textProvider = CLKSimpleTextProvider(text: longText, shortText: shortText)

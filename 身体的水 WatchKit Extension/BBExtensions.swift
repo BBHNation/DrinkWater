@@ -22,8 +22,9 @@ extension WKInterfaceImage {
         //do some draw ...
         
         //// Color Declarations
+        let red = 0.063/(percent*10) > 1 ? 1 : 0.063/(percent*10)
         let color = UIColor(red: 0.152, green: 1.000, blue: 0.521, alpha: 0.517)
-        let color2 = UIColor(red: 0.063, green: 1.000, blue: 0.414, alpha: 1.000)
+        let color2 = UIColor(red: CGFloat(red), green: 1.000, blue: 0.414, alpha: 1.000)
         
         //// Oval Drawing
         let ovalPath = UIBezierPath(ovalIn: CGRect.init(x: 50, y: 50, width: 400, height: 400))
