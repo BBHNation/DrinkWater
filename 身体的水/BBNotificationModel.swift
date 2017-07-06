@@ -89,11 +89,11 @@ class BBNotificationModel: NSObject {
     /// 注册通知类型
     private func registerNotificationCategory() {
         let drinkWaterCategory: UNNotificationCategory = {
-            let inputAction = UNTextInputNotificationAction(identifier: drinkCustomIdentity, title: "自定义", options: UNNotificationActionOptions.destructive, textInputButtonTitle: "就喝这么多", textInputPlaceholder: "输入喝水量（数字），单位毫升")
+//            let inputAction = UNTextInputNotificationAction(identifier: drinkCustomIdentity, title: "自定义", options: UNNotificationActionOptions.destructive, textInputButtonTitle: "就喝这么多", textInputPlaceholder: "输入喝水量（数字），单位毫升")
             
             let drinkOneAction = UNNotificationAction.init(identifier: drinkOneMouseIdentity, title: "喝一口", options: UNNotificationActionOptions.destructive)
             let drinkCupAction = UNNotificationAction.init(identifier: drinkOneCupIdentity, title: "喝一杯", options: UNNotificationActionOptions.destructive)
-            return UNNotificationCategory.init(identifier: categoryIdentity, actions: [inputAction, drinkOneAction, drinkCupAction], intentIdentifiers: [], options: UNNotificationCategoryOptions.customDismissAction)
+            return UNNotificationCategory.init(identifier: categoryIdentity, actions: [drinkOneAction, drinkCupAction], intentIdentifiers: [], options: UNNotificationCategoryOptions.customDismissAction)
         }()
         
         UNUserNotificationCenter.current().setNotificationCategories([drinkWaterCategory])

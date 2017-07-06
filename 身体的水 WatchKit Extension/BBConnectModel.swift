@@ -151,6 +151,7 @@ class BBConnectModel: NSObject,WCSessionDelegate {
             UserDefaults.standard.set(cupDrink, forKey: CUP_DRINK)
             UserDefaults.standard.set(littleDrink, forKey: LITTLE_DRINK)
             UserDefaults.standard.set(age, forKey: "age")
+            UserDefaults.standard.set(true, forKey: IS_SETED_MAIN_SETTING)
             UserDefaults.standard.synchronize()
         }
     }

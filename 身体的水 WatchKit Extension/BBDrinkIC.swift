@@ -37,6 +37,10 @@ class BBDrinkIC: WKInterfaceController {
         BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(getLittleDrink())/1000)
     }
     
+    private func postNotification() {
+        NotificationCenter.default.post(name: NSNotification.Name.init(notificationName), object: nil)
+    }
+    
     /// 开始喝水动画
     private func setDrinking() {
         self.animate(withDuration: 0.5) {
@@ -77,6 +81,7 @@ class BBDrinkIC: WKInterfaceController {
             }
         }
         BBConnectModel.sharedModel.reloadTimeLineData()
+        postNotification()
     }
     
     

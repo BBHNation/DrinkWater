@@ -10,6 +10,7 @@ import WatchKit
 import Foundation
 
 
+let notificationName = "HasDrinkedWater"
 class BBMainWaterIC: WKInterfaceController {
 
     @IBOutlet var drewImage: WKInterfaceImage!
@@ -21,6 +22,10 @@ class BBMainWaterIC: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         backCircleGroup.setHeight(156)
+        NotificationCenter.default.addObserver(self, selector: #selector(receiveNotification), name: NSNotification.Name.init(notificationName), object: nil)
+    }
+    @objc func receiveNotification() {
+        refreshData()
     }
 
     override func willActivate() {
@@ -45,6 +50,8 @@ class BBMainWaterIC: WKInterfaceController {
                 strongSelf.leftWaterLabel.setText(String.init(format: "%d", abs(calculateWaterNum() - Int(drinked))))
                 if calculateWaterNum() - Int(drinked) < 0 {
                     strongSelf.noticeLabel.setText("额外喝水")
+                } else {
+                    strongSelf.noticeLabel.setText("需要喝水")
                 }
                 BBConnectModel.sharedModel.reloadTimeLineData()
             }
