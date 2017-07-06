@@ -40,9 +40,6 @@ class BBNotificationModel: NSObject {
         endTimeDouble = endTime
         frequencyDouble = Double(frequencyInterval)/3600
         
-        frequencyDouble = Double(60)/3600
-        
-        
         removeAllNotice()
         registerNotificationCategory()
         
@@ -66,7 +63,7 @@ class BBNotificationModel: NSObject {
         //需创建一个包含待通知内容的 UNMutableNotificationContent 对象，注意不是 UNNotificationContent ,此对象为不可变对象。
         let content = UNMutableNotificationContent.init()
         content.title = "该喝水啦！"
-        content.body = "快来喝点水吧，身体很渴咯，健康的喝水习惯是健康人生的基础"
+        content.body = "快来喝点水吧，身体很渴咯"
         content.sound = UNNotificationSound.default()
         content.categoryIdentifier = categoryIdentity
         

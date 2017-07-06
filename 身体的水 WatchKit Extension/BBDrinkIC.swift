@@ -28,11 +28,13 @@ class BBDrinkIC: WKInterfaceController {
         //喝一杯
         print("喝一杯")
         setDrinking()
+        BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(BBSettingDataModel.sharedModel.getCupDrink())/1000)
     }
     @IBAction func drinkAMouse(_ sender: Any) {
         //喝一口
         print("喝一口")
         setDrinking()
+        BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(BBSettingDataModel.sharedModel.getLittleDrink())/1000)
     }
     
     /// 开始喝水动画

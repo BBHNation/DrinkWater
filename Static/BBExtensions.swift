@@ -22,15 +22,9 @@ extension UIImage {
         //do some draw ...
         
         //// Color Declarations
+        let red = 0.063/percent > 1 ? 1 : 0.063/percent
         let color = UIColor(red: 0.152, green: 1.000, blue: 0.521, alpha: 0.517)
-        var color2: UIColor
-        if percent < 0.3 {
-            color2 = UIColor.red
-        } else if percent > 0.3 && percent < 0.8 {
-            color2 = UIColor.orange
-        } else {
-            color2 = UIColor(red: 0.063, green: 1.000, blue: 0.414, alpha: 1.000)
-        }
+        let color2 = UIColor(red: CGFloat(red), green: 1.000, blue: 0.414, alpha: 1.000)
         
         
         //// Oval Drawing

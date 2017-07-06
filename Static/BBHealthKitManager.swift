@@ -37,7 +37,7 @@ class BBHealthKitManager: NSObject {
     }
     
     
-    /// 写入喝水数据
+    /// 写入喝水数据,单位是L
     ///
     /// - Parameter waterNum: 喝了多少水量
     public func writeDataWithWater(waterNum : Double) {

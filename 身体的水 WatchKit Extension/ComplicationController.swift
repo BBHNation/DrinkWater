@@ -38,28 +38,36 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         var entry : CLKComplicationTimelineEntry?
         let now = NSDate()
         
-        // Create the template and timeline entry.
-        if complication.family == .modularSmall {
-            let longText = "\(UserDefaults.standard.integer(forKey: LEFT_WATER_NUM))"
-            let shortText = "\(UserDefaults.standard.integer(forKey: LEFT_WATER_NUM))"
+        BBHealthKitManager.manager.getTotalDrinkCount(completion: { (drinked, err) in
+//            guard let strongSelf = self else { return }
+            if err != nil { return }
+            let left = BBSettingDataModel.sharedModel.calculateWaterNum() - Int(drinked)
             
-            let textTemplate = CLKComplicationTemplateModularSmallSimpleText()
-            textTemplate.textProvider = CLKSimpleTextProvider(text: longText, shortText: shortText)
-            
-            entry = CLKComplicationTimelineEntry(date: now as Date, complicationTemplate: textTemplate)
-        }
-        else if complication.family == .utilitarianSmall{
-            let longText = "\(UserDefaults.standard.integer(forKey: LEFT_WATER_NUM))"
-            let shortText = "\(UserDefaults.standard.integer(forKey: LEFT_WATER_NUM))"
-            
-            let textTemplate = CLKComplicationTemplateUtilitarianSmallFlat()
-            textTemplate.textProvider = CLKSimpleTextProvider(text: longText, shortText: shortText)
-            let image = UIImage(named: "water")
-            textTemplate.imageProvider = CLKImageProvider(onePieceImage:image!)
-            
-            entry = CLKComplicationTimelineEntry(date: now as Date, complicationTemplate: textTemplate)
-        }
-        handler(entry)
+            // Create the template and timeline entry.
+            if complication.family == .modularSmall {
+                let longText = "\(left)"
+                let shortText = "\(left)"
+                
+                let textTemplate = CLKComplicationTemplateModularSmallSimpleText()
+                textTemplate.textProvider = CLKSimpleTextProvider(text: longText, shortText: shortText)
+                
+                entry = CLKComplicationTimelineEntry(date: now as Date, complicationTemplate: textTemplate)
+            }
+            else if complication.family == .utilitarianSmall{
+                let longText = "\(left)"
+                let shortText = "\(left)"
+                
+                let textTemplate = CLKComplicationTemplateUtilitarianSmallFlat()
+                textTemplate.textProvider = CLKSimpleTextProvider(text: longText, shortText: shortText)
+                let image = UIImage(named: "water")
+                textTemplate.imageProvider = CLKImageProvider(onePieceImage:image!)
+                
+                entry = CLKComplicationTimelineEntry(date: now as Date, complicationTemplate: textTemplate)
+            }
+            handler(entry)
+        })
+        
+        
     }
     
     func getTimelineEntries(for complication: CLKComplication, before date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {

@@ -156,7 +156,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="724" y="218"/>
+            <point key="canvasLocation" x="681" y="239"/>
         </scene>
         <!--喝水-->
         <scene sceneID="859-3D-1zT">
@@ -173,7 +173,7 @@
                                 <group width="1" height="66" alignment="left" layout="vertical" id="fhp-XM-BhJ">
                                     <items>
                                         <imageView width="44" height="46" alignment="center" image="finalCup" id="sUh-x8-4KY"/>
-                                        <label height="13" alignment="center" text="一杯" textAlignment="center" id="MiB-Ph-fIt">
+                                        <label height="13" alignment="center" text="喝一杯" textAlignment="center" id="MiB-Ph-fIt">
                                             <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </items>
@@ -187,8 +187,8 @@
                                 </group>
                                 <group width="1" height="73" alignment="left" verticalAlignment="bottom" layout="vertical" id="HO4-0d-Q5a">
                                     <items>
-                                        <imageView width="56" height="40" alignment="center" image="finalWater" id="V7H-ui-Yc1"/>
-                                        <label height="14" alignment="center" text="一口" textAlignment="center" id="G2w-Dg-IpO">
+                                        <imageView width="55" height="40" alignment="center" image="finalWater" id="V7H-ui-Yc1"/>
+                                        <label height="14" alignment="center" text="喝一口" textAlignment="center" id="G2w-Dg-IpO">
                                             <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </items>
@@ -210,7 +210,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="980" y="218"/>
+            <point key="canvasLocation" x="936.30769230769238" y="238.43589743589746"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
