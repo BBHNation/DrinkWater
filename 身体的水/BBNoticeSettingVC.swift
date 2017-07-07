@@ -30,7 +30,7 @@ class BBNoticeSettingVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let userDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        let userDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
         let switchOn = userDefaults?.bool(forKey: NOTICE_SWITCH_ON)
         noticeSwitch.isOn = switchOn!
        
@@ -51,7 +51,7 @@ class BBNoticeSettingVC: UITableViewController {
         else {
             BBNotificationModel.sharedModel.removeAllNotice()
         }
-        let userDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        let userDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
         userDefaults?.set(noticeSwitch.isOn, forKey: NOTICE_SWITCH_ON)
         userDefaults?.synchronize()
     }
@@ -186,7 +186,7 @@ class BBNoticeSettingVC: UITableViewController {
     }
     
     private func getDate() {
-        let userDefault = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        let userDefault = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
         let beginDate = userDefault?.object(forKey: "beginTimeDate") as? Date
         if beginDate != nil {
             beginTimePicker?.datePicker.date = beginDate!
@@ -204,7 +204,7 @@ class BBNoticeSettingVC: UITableViewController {
     }
     
     private func saveDate() {
-        let userDefault = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        let userDefault = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
         userDefault?.setValue(beginTimePicker?.datePicker.date, forKey: "beginTimeDate")
         userDefault?.setValue(endTimePicker?.datePicker.date, forKey: "endTimeDate")
         userDefault?.setValue(frequencyTimePicker?.datePicker.date, forKey: "freTimeDate")

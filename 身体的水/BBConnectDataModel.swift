@@ -22,14 +22,14 @@ class BBConnectDataModel: NSObject, WCSessionDelegate{
             session.activate()
         }
         //初始化
-        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
         dataUserDefaults?.set(false, forKey: SHARED_USER_DEFALT_CHANGED)
         dataUserDefaults?.synchronize()
     }
     
     /// 向watch传输更新信息
     func updateData() {
-        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
         let num = dataUserDefaults?.integer(forKey: LEFT_WATER_NUM)
         sendMessage(dic: [LEFT_WATER_NUM:num ?? 0])
     }
@@ -54,7 +54,7 @@ class BBConnectDataModel: NSObject, WCSessionDelegate{
     ///
     /// - Returns: 返回Int值，表示还剩多少水要喝
     func leftWaterNum() -> Int{
-        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
         return (dataUserDefaults?.integer(forKey: LEFT_WATER_NUM))!
     }
     
@@ -65,7 +65,7 @@ class BBConnectDataModel: NSObject, WCSessionDelegate{
     func saveWaterLeftData(value : Int) {
         // 这里使用的是共享的UserDefault来同步数据，需要修改
         // 直接使用健康应用中记录的喝水量来计算还剩余多少水需要喝
-        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
         dataUserDefaults?.set(value, forKey: LEFT_WATER_NUM)
         dataUserDefaults?.synchronize()
     }
@@ -83,7 +83,7 @@ class BBConnectDataModel: NSObject, WCSessionDelegate{
             saveWaterLeftData(value: (message[LEFT_WATER_NUM] as! Int))
             print((message[LEFT_WATER_NUM] as! Int))
             
-            let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+            let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
             dataUserDefaults?.set((message[LEFT_WATER_NUM] as! Int), forKey: LEFT_WATER_NUM)
         }
         else if (message["code"] as? String) == SHARED_USER_DEFALT_CHANGED {

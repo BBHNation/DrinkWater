@@ -11,7 +11,7 @@
 import Foundation
 
 let LEFT_WATER_NUM = "waterNumLeft"// 剩下的水量
-let SHARED_USER_DEFALT = "group.cn.iceFrozen.waterOfLife"// group共享defalt
+let SHARED_USER_DEFAULT = "group.cn.iceFrozen.waterOfLife"// group共享defalt
 let SHARED_DATE = "group.cn.bbh.bodyWater.date"// 共享的日期，用来设置更新
 let IS_SETED_DATE = "is.seted.date"// 是否设置了日期
 let SHARED_USER_DEFALT_CHANGED = "group.cn.bbh.bodyWater.isChanged"// 通知：水量是否被修改
@@ -30,7 +30,7 @@ class refreshModel : NSObject{
     /// 初始化
     override init() {
         // 初始化，获取group的UserDefalt
-        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
         // 判断是否已经存在bool值设置了日期
         var isSetedDate = dataUserDefaults?.bool(forKey: IS_SETED_DATE)
         if isSetedDate==false {
@@ -46,7 +46,7 @@ class refreshModel : NSObject{
     
     /// 刷新日期
     public func refreshData() {
-        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
         let isSetedDate = dataUserDefaults?.bool(forKey: IS_SETED_DATE)
         if isSetedDate==true {
             // 如果已经设置日期，判断日期与今天是否相同
@@ -83,7 +83,7 @@ public func calculateWaterNum() -> Int{
     
     var waterNum = 1300
 #if os(iOS)
-    let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+    let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
     let age: Int? = dataUserDefaults?.value(forKey: "age") as! Int?
 #elseif os(watchOS)
     let dataUserDefaults = UserDefaults.standard
@@ -105,7 +105,7 @@ public func calculateWaterNum() -> Int{
 /// - Returns: 返回Int一杯水的毫升数
 public func getCupDrink() -> Int {
     #if os(iOS)
-        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
         if dataUserDefaults?.bool(forKey: IS_SETED_MAIN_SETTING) == true {
             return (dataUserDefaults!.integer(forKey: CUP_DRINK))
         }
@@ -129,7 +129,7 @@ public func getCupDrink() -> Int {
 /// - Returns: 返回Int一口水的量
 public func getLittleDrink() -> Int {
     #if os(iOS)
-        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
         if dataUserDefaults?.bool(forKey: IS_SETED_MAIN_SETTING) == true {
             return (dataUserDefaults!.integer(forKey: LITTLE_DRINK))
         }

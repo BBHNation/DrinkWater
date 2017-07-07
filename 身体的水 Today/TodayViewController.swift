@@ -120,7 +120,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     ///
     /// - Parameter value: 改变多少（带符号）
     func changeAndSaveNumOfWaterLeft(_ value : Int) {
-        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
+        let dataUserDefaults = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
         var waterNum = dataUserDefaults?.integer(forKey: LEFT_WATER_NUM)
         waterNum = waterNum! + value
         if waterNum! < 0 {

@@ -42,17 +42,15 @@ class BBSettingDataModel: NSObject {
     
     /// 保存数据到UserDefalt
     public func saveDataToUserDefalt() {
-        UserDefaults.standard.set(age, forKey: "age")
-        UserDefaults.standard.set(height, forKey: "height")
-        UserDefaults.standard.set(weight, forKey: "weight")
-        UserDefaults.standard.set(littleDrink, forKey: "littleDrink")
-        UserDefaults.standard.set(cupDrink, forKey: "cupDrink")
-        UserDefaults.standard.set(gender, forKey: "gender")
-        UserDefaults.standard.set(true, forKey: "isSetedSettingData")
-        UserDefaults.standard.synchronize()
+        let userDefault = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
+        userDefault?.set(age, forKey: "age")
+        userDefault?.set(height, forKey: "height")
+        userDefault?.set(weight, forKey: "weight")
+        userDefault?.set(littleDrink, forKey: "littleDrink")
+        userDefault?.set(cupDrink, forKey: "cupDrink")
+        userDefault?.set(gender, forKey: "gender")
+        userDefault?.set(true, forKey: "isSetedSettingData")
         
-        
-        let userDefault = UserDefaults.init(suiteName: SHARED_USER_DEFALT)
         userDefault?.set(cupDrink, forKey: CUP_DRINK)
         userDefault?.set(littleDrink, forKey: LITTLE_DRINK)
         userDefault?.set(true, forKey: IS_SETED_MAIN_SETTING)
