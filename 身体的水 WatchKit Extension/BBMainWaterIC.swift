@@ -21,23 +21,29 @@ class BBMainWaterIC: WKInterfaceController {
     var currentPercent: Double = 0.0
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        backCircleGroup.setHeight(156)
+        backCircleGroup.setHeight(WKInterfaceDevice.current().screenBounds.width)
         NotificationCenter.default.addObserver(self, selector: #selector(receiveNotification), name: NSNotification.Name.init(notificationName), object: nil)
     }
+    
     @objc func receiveNotification() {
         refreshData()
     }
 
+    
+    /// 界面将要出现的时候的操作
     override func willActivate() {
         super.willActivate()
         BBConnectModel.sharedModel.setSession();
-        // 这里做判断，如果数据没变则不动，数据变了则重新绘图
         refreshData()
+        // 这里做判断，如果数据没变则不动，数据变了则重新绘图
     }
     
+    /// 手动更新数据和界面
     @IBAction func refreshView() {
         refreshData()
     }
+    
+    /// 更新数据和界面
     private func refreshData() {
         BBHealthKitManager.manager.getTotalDrinkCount { [weak self] (drinked, err) in
             guard let strongSelf = self else { return }

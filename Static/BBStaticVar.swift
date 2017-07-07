@@ -19,6 +19,8 @@ let NOTICE_SWITCH_ON = "noticeSwitchOn"// 通知是否打开了
 let CUP_DRINK = "cupDrinkWater"// 一杯水
 let LITTLE_DRINK = "littleDrinkWater"// 一口水
 let IS_SETED_MAIN_SETTING = "isSettedMainSetting"// 是否设置了user主要数据
+let NEWEST_DRINKED_WATER_NUM_KEY = "newestDrinkedWaterNumKey"// 保存每一次从HeathKit中获取的喝水量，方便在锁屏的时候使用
+let TEMPERATURE_KEY = "temperatureKey"// 保存当前的温度，每次请求后刷新
 
 extension String {
     // url encode
@@ -107,6 +109,15 @@ public func calculateWaterNum() -> Int{
     }else {
         waterNum = waterNum + 500
     }
+    
+    // 这里是关于天气的处理
+//    guard let temperatureNow = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)?.value(forKey: TEMPERATURE_KEY) as! Double? else {
+//        return waterNum
+//    }
+//    if temperatureNow > 30.0{
+//        waterNum += 200
+//    }
+    
     return waterNum
 }
 

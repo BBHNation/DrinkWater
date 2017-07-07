@@ -30,20 +30,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        circleImage.image = UIImage.DrewCicle(percent: 0.4)
+        circleImage.image = UIImage.DrewCicle(percent: 1.0)
         refreshModel.sharedModel.refreshData()
         reloadData()
         cupButton.isSelected = true
         littleButton.isSelected = true
-        
-        
-        BBLocationAndWeatherManger.manager.getCityAndWeatherInfo { (cityname, temperature, describe, err) in
-            if err != nil {
-                print("err is \(String(describing: err?.localizedDescription))")
-                return
-            }
-            print("\(String(describing: cityname)) \(String(describing: temperature))C \(String(describing: describe))")
-        }
+        loadWeatherInfo()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -51,11 +43,36 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         timer = nil
     }
     
-    @objc func deviceUnlocked() {
-        noticeLabel.text = "已经解锁"
+    /// 获取天气情况
+    private func loadWeatherInfo() {
+        BBLocationAndWeatherManger.manager.getCityAndWeatherInfo { [weak self] (cityname, temperature, describe, code, err) in
+            guard let strongSelf = self else { return }
+            if err != nil {
+                print("err is \(String(describing: err?.localizedDescription))")
+                return
+            }
+            print("\(String(describing: cityname)) \(String(describing: temperature))C \(String(describing: describe))")
+            DispatchQueue.main.async {
+                strongSelf.weatherLabel.text = "\(cityname ?? " ") \(temperature ?? " ")C \(describe ?? " ")"
+                
+                guard let c = code else { return }
+                strongSelf.weatherIcon.image = UIImage.init(named: "\(c).png")
+                
+                guard let tem = temperature else { return }
+                let temNum = Double(tem)
+                // 温度的一些处理
+                if temNum != nil {
+                    if temNum! > 30.0 {
+                        strongSelf.adviceLabel.text = "天气炎热，建议增加喝水量"
+                    }
+                    else {
+                        strongSelf.adviceLabel.text = "健康饮水，健康生活"
+                    }
+                }
+                
+            }
+        }
     }
-    
-    
 
     
     
@@ -107,8 +124,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 // 修改圆圈
                 BBHealthKitManager.manager.getTotalDrinkCount(completion: { [weak self] (drinked, err) in
                     guard let strongSelf = self else {return}
+                    if err != nil { return }
                     let queue = DispatchQueue.main
                     queue.async(execute: {
+                        
                         let persent = drinked/Double(strongSelf.totalWaterToDrink)
                         strongSelf.circleImage.image = UIImage.DrewCicle(percent: persent)
                         if persent >= 1.0 {
@@ -148,21 +167,33 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             self.waterNumLabel.alpha = 0.0
             self.waterCupLabel.alpha = 0.0
             BBHealthKitManager.manager.getTotalDrinkCount(completion: { [weak self] (drinked, err) in
+                guard let strongSelf = self else { return }
                 if err != nil {
+                    // 获取数据错误
                     DispatchQueue.main.sync {
                         guard let strongSelf = self else { return }
-                        strongSelf.noticeLabel.text = "请解锁手机\n获取数据"
+                        strongSelf.noticeLabel.text = "请解锁手机\n并点击以\n刷新界面"
+                        strongSelf.adviceLabel.text = "锁屏无法获取健康数据"
+                        strongSelf.cupButton.isUserInteractionEnabled = false
+                        strongSelf.littleButton.isUserInteractionEnabled = false
                     }
                     return
                 }
-                guard let strongSelf = self else { return }
                 DispatchQueue.main.async(execute: {
+                    // 恢复UI
+                    strongSelf.cupButton.isUserInteractionEnabled = true
+                    strongSelf.littleButton.isUserInteractionEnabled = true
+                    strongSelf.noticeLabel.text = "点击按钮\n记录喝水"
+                    strongSelf.drinkNoticeLabel.text = "需要喝水"
+                    
+                    
                     let percent = drinked/Double(strongSelf.totalWaterToDrink)
                     let left = strongSelf.totalWaterToDrink - Int(drinked)
                     strongSelf.leftWater = left
                     strongSelf.waterNumLabel.text = "\(abs(left))"
                     strongSelf.waterCupLabel.text = String.init(format: "%.1f", Double(abs(left))/Double(getCupDrink()))
-                    strongSelf.noticeLabel.text = "点击按钮\n记录喝水"
+                    
+                    
                     if percent >= 1 {
                         strongSelf.noticeLabel.text = "恭喜你！\n完成任务"
                         strongSelf.drinkNoticeLabel.text = "额外喝水"
@@ -179,6 +210,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
  
     }
     
+    @IBAction func tapLabelToReloadData(_ sender: Any) {
+        BBHealthKitManager.manager.getTotalDrinkCount { [weak self](_, err) in
+            guard let strongSelf = self else { return }
+            if err == nil {
+                if strongSelf.cupButton.isUserInteractionEnabled == false && strongSelf.littleButton.isUserInteractionEnabled == false {
+                    strongSelf.cupButton.isUserInteractionEnabled = true
+                    strongSelf.littleButton.isUserInteractionEnabled = true
+                    strongSelf.reloadData()
+                }
+            }
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

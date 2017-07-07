@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="1800" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rh-DS-UEf">
-                                <rect key="frame" x="234" y="5" width="72" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="-----" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rh-DS-UEf">
+                                <rect key="frame" x="236" y="5" width="68.5" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="130" id="Aue-Pq-6yq"/>
                                     <constraint firstAttribute="height" constant="25" id="k2I-KF-J39"/>
@@ -32,8 +32,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="3.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VP-vz-jFa">
-                                <rect key="frame" x="234.5" y="35" width="72" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VP-vz-jFa">
+                                <rect key="frame" x="236.5" y="35" width="68.5" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="130" id="NI1-n0-VFX"/>
                                     <constraint firstAttribute="height" constant="25" id="k6a-my-3SK"/>
@@ -119,20 +119,20 @@
                                     <constraint firstAttribute="height" constant="1" id="Tm7-SW-dY1"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="齐齐哈尔 33C 雷阵雨" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blM-6C-ijj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天气情况刷新中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blM-6C-ijj">
                                 <rect key="frame" x="177" y="71" width="156" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="天气" translatesAutoresizingMaskIntoConstraints="NO" id="FNg-45-6Pk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="99" translatesAutoresizingMaskIntoConstraints="NO" id="FNg-45-6Pk">
                                 <rect key="frame" x="333" y="71" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="loa-a8-Juf"/>
                                     <constraint firstAttribute="height" constant="30" id="pqr-st-1Bo"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已经增加喝水量。建议带伞" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjJ-Uv-oUp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="建议：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjJ-Uv-oUp">
                                 <rect key="frame" x="177" y="87.5" width="156" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -157,20 +157,24 @@
                                 <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NE5-Vg-LLq">
-                                <rect key="frame" x="30" y="36" width="73" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">点击按钮
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NE5-Vg-LLq">
+                                <rect key="frame" x="42" y="40.5" width="49.5" height="29"/>
+                                <gestureRecognizers/>
+                                <string key="text">点击水滴
 记录喝水</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="S5q-I3-hFN" appends="YES" id="jku-5P-n30"/>
+                                </connections>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0Kl-2M-Py9" firstAttribute="top" secondItem="pZK-RX-3Z0" secondAttribute="top" id="14g-qB-76W"/>
                             <constraint firstItem="0Kl-2M-Py9" firstAttribute="leading" secondItem="pZK-RX-3Z0" secondAttribute="trailing" constant="8" id="4dB-ID-2WT"/>
+                            <constraint firstItem="NE5-Vg-LLq" firstAttribute="centerY" secondItem="pZK-RX-3Z0" secondAttribute="centerY" id="6gv-14-Xyx"/>
                             <constraint firstItem="Yde-3a-I1x" firstAttribute="top" secondItem="hi4-3a-QY8" secondAttribute="top" id="7zk-e1-2yZ"/>
                             <constraint firstItem="FNg-45-6Pk" firstAttribute="top" secondItem="blM-6C-ijj" secondAttribute="top" id="8VT-bE-qXM"/>
                             <constraint firstAttribute="trailing" secondItem="Yde-3a-I1x" secondAttribute="trailing" constant="12" id="8dh-w1-uHV"/>
@@ -190,6 +194,7 @@
                             <constraint firstItem="blM-6C-ijj" firstAttribute="top" secondItem="Yde-3a-I1x" secondAttribute="bottom" constant="5" id="YA4-GU-9of"/>
                             <constraint firstItem="pZK-RX-3Z0" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="Ylh-vR-ySM"/>
                             <constraint firstItem="WjJ-Uv-oUp" firstAttribute="leading" secondItem="blM-6C-ijj" secondAttribute="leading" id="aDR-VO-PXx"/>
+                            <constraint firstItem="NE5-Vg-LLq" firstAttribute="centerX" secondItem="pZK-RX-3Z0" secondAttribute="centerX" id="bIi-Cl-a19"/>
                             <constraint firstItem="2VP-vz-jFa" firstAttribute="top" secondItem="1rh-DS-UEf" secondAttribute="bottom" constant="5" id="jFR-88-crz"/>
                             <constraint firstItem="1rh-DS-UEf" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="5" id="phw-in-rkc"/>
                             <constraint firstItem="4R2-OC-Giw" firstAttribute="centerX" secondItem="BjU-kW-kLh" secondAttribute="centerX" id="qKq-Er-0cV"/>
@@ -218,12 +223,17 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="S5q-I3-hFN">
+                    <connections>
+                        <action selector="tapLabelToReloadData:" destination="M4Y-Lb-cyx" id="egp-uk-sac"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-31.199999999999999" y="91.754122938530742"/>
         </scene>
     </scenes>
     <resources>
-        <image name="天气" width="200" height="200"/>
+        <image name="99" width="60" height="60"/>
         <image name="杯子" width="200" height="200"/>
         <image name="水滴" width="200" height="200"/>
     </resources>

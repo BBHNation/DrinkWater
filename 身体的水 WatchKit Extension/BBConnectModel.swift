@@ -32,18 +32,10 @@ class BBConnectModel: NSObject,WCSessionDelegate {
     func synchronizeDataWithPhone() {
         WCSession.default().sendMessage(["code":SHARED_USER_DEFALT_CHANGED], replyHandler: { (replyDic)  in
             if replyDic[LEFT_WATER_NUM] != nil {
-//                let oldWaterNum = self.leftWaterNumToday()
-//                if oldWaterNum < (replyDic[LEFT_WATER_NUM] as! Int) {
-//                    //do nothing
-//                    //同步回来的数据不是最新的，本地才是最新的
-//                    //丢弃数据
-//                }
-//                else {
                     self.waterNum = replyDic[LEFT_WATER_NUM] as? Int
                     NotificationCenter.default.post(name: NSNotification.Name.init("waterChange"), object: nil)
                     UserDefaults.standard.set(replyDic[LEFT_WATER_NUM], forKey: LEFT_WATER_NUM)
                     self.reloadTimeLineData()
-//                }
             }
             
             if replyDic[CUP_DRINK] != nil && replyDic[LITTLE_DRINK] != nil{

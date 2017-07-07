@@ -17,15 +17,15 @@ class BBLocationAndWeatherManger: NSObject, CLLocationManagerDelegate {
     
     
     
-    public func getCityAndWeatherInfo(_ complete: @escaping (_ cityName: String?, _ temperature: String?, _ describe: String?, _ err: Error?) -> ()) {
+    public func getCityAndWeatherInfo(_ complete: @escaping (_ cityName: String?, _ temperature: String?, _ describe: String?, _ code: String?,_ err: Error?) -> ()) {
         getCurrentLocation { (placeMark, err) in
             if err != nil {
-                complete(nil, nil, nil, err!)
+                complete(nil, nil, nil, nil, err!)
                 return
             }
             guard let cityName: String = placeMark?.addressDictionary?["City"] as? String else {
                 let error: Error = NSError.init(domain: "不能获取城市名", code: 1024, userInfo: nil) as Error
-                complete(nil,nil,nil,error)
+                complete(nil,nil,nil, nil, error)
                 return
             }
             let url: URL = URL.init(string: "https://api.seniverse.com/v3/weather/now.json?key=4DGW8W2I1Q&location=\(cityName)&language=zh-Hans&unit=c".urlEncode)!
@@ -33,7 +33,7 @@ class BBLocationAndWeatherManger: NSObject, CLLocationManagerDelegate {
                 do {
                     if data == nil {
                         let error: Error = NSError.init(domain: "没有结果返回", code: 1026, userInfo: nil) as Error
-                        complete(nil, nil, nil, error)
+                        complete(nil, nil, nil, nil, error)
                         return
                     }
                     let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String : Any]
@@ -41,14 +41,14 @@ class BBLocationAndWeatherManger: NSObject, CLLocationManagerDelegate {
                         let result = (resultArr as! [Any]).first
                         guard let resultNow = (result as! [String : Any])["now"] as? [String : Any] else {
                             let error: Error = NSError.init(domain: "解析结果错误", code: 1025, userInfo: nil) as Error
-                            complete(nil, nil, nil, error)
+                            complete(nil, nil, nil, nil, error)
                             return
                         }
-                        complete(cityName, resultNow["temperature"] as? String, resultNow["text"] as? String, nil)
+                        complete(cityName, resultNow["temperature"] as? String, resultNow["text"] as? String, resultNow["code"] as? String,nil)
                     }
                 } catch {
                     let error: Error = NSError.init(domain: "解析Json结果错误", code: 1026, userInfo: nil) as Error
-                    complete(nil, nil, nil, error)
+                    complete(nil, nil, nil, nil, error)
                 }
             })
         }
