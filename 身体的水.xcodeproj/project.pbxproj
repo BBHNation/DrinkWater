@@ -28,6 +28,8 @@
 		523781981E4C0F2B0095C713 /* BBDrinkIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523781971E4C0F2B0095C713 /* BBDrinkIC.swift */; };
 		5237819B1E4C1D710095C713 /* BBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523781991E4C1D680095C713 /* BBExtensions.swift */; };
 		5237819C1E4C1D730095C713 /* BBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523781991E4C1D680095C713 /* BBExtensions.swift */; };
+		524A24F91F0F1B0C004E166C /* BBLocationAndWeatherManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A24F81F0F1B0C004E166C /* BBLocationAndWeatherManger.swift */; };
+		524A24FB1F0F2A47004E166C /* BBNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A24FA1F0F2A47004E166C /* BBNetworkManager.swift */; };
 		525324111E3044D800A69872 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525324101E3044D800A69872 /* NotificationCenter.framework */; };
 		525324141E3044D800A69872 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525324131E3044D800A69872 /* TodayViewController.swift */; };
 		525324171E3044D800A69872 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525324151E3044D800A69872 /* MainInterface.storyboard */; };
@@ -53,6 +55,10 @@
 		5287590C1E39CAA1003A87E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287590B1E39CAA1003A87E0 /* HealthKit.framework */; };
 		5287590D1E39CAAE003A87E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287590B1E39CAA1003A87E0 /* HealthKit.framework */; };
 		52B6807E1E4C0E5600C721FF /* BBMainWaterIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6807D1E4C0E5600C721FF /* BBMainWaterIC.swift */; };
+		52BF3E2F1F0F4D4D0046853C /* BBLocationAndWeatherManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A24F81F0F1B0C004E166C /* BBLocationAndWeatherManger.swift */; };
+		52BF3E301F0F4D4D0046853C /* BBLocationAndWeatherManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A24F81F0F1B0C004E166C /* BBLocationAndWeatherManger.swift */; };
+		52BF3E311F0F4D500046853C /* BBNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A24FA1F0F2A47004E166C /* BBNetworkManager.swift */; };
+		52BF3E321F0F4D510046853C /* BBNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A24FA1F0F2A47004E166C /* BBNetworkManager.swift */; };
 		52CA42521E2F24570038EE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA42511E2F24570038EE33 /* AppDelegate.swift */; };
 		52CA42571E2F24570038EE33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CA42551E2F24570038EE33 /* Main.storyboard */; };
 		52CA42591E2F24570038EE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CA42581E2F24570038EE33 /* Assets.xcassets */; };
@@ -66,7 +72,6 @@
 		52CA427D1E2F24580038EE33 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA427C1E2F24580038EE33 /* ComplicationController.swift */; };
 		52CA427F1E2F24580038EE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CA427E1E2F24580038EE33 /* Assets.xcassets */; };
 		52CA428F1E2F2B0A0038EE33 /* BBSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA428E1E2F2B0A0038EE33 /* BBSettingVC.swift */; };
-		52CA42DA1E2F308D0038EE33 /* BBMainIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA42D91E2F308D0038EE33 /* BBMainIC.swift */; };
 		52CA42DC1E2F35350038EE33 /* BBConnectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA42DB1E2F35350038EE33 /* BBConnectModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +149,8 @@
 		521E57561F0CC9E300547BC9 /* BBExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBExtensions.swift; sourceTree = "<group>"; };
 		523781971E4C0F2B0095C713 /* BBDrinkIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBDrinkIC.swift; sourceTree = "<group>"; };
 		523781991E4C1D680095C713 /* BBExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBExtensions.swift; sourceTree = "<group>"; };
+		524A24F81F0F1B0C004E166C /* BBLocationAndWeatherManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBLocationAndWeatherManger.swift; sourceTree = "<group>"; };
+		524A24FA1F0F2A47004E166C /* BBNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBNetworkManager.swift; sourceTree = "<group>"; };
 		5253240E1E3044D800A69872 /* 身体的水 Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "身体的水 Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		525324101E3044D800A69872 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		525324131E3044D800A69872 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -187,7 +194,6 @@
 		52CA427E1E2F24580038EE33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52CA42801E2F24580038EE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52CA428E1E2F2B0A0038EE33 /* BBSettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBSettingVC.swift; sourceTree = "<group>"; };
-		52CA42D91E2F308D0038EE33 /* BBMainIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBMainIC.swift; sourceTree = "<group>"; };
 		52CA42DB1E2F35350038EE33 /* BBConnectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBConnectModel.swift; sourceTree = "<group>"; };
 		75AC11378F1C1646AEF32096 /* Pods-身体的水.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-身体的水.release.xcconfig"; path = "Pods/Target Support Files/Pods-身体的水/Pods-身体的水.release.xcconfig"; sourceTree = "<group>"; };
 		A344644BA0C837A872F909D4 /* Pods______Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______Today.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -326,6 +332,8 @@
 				528758FF1E39C534003A87E0 /* BBStaticVar.swift */,
 				523781991E4C1D680095C713 /* BBExtensions.swift */,
 				528759031E39C582003A87E0 /* BBHealthKitManager.swift */,
+				524A24F81F0F1B0C004E166C /* BBLocationAndWeatherManger.swift */,
+				524A24FA1F0F2A47004E166C /* BBNetworkManager.swift */,
 			);
 			path = Static;
 			sourceTree = "<group>";
@@ -388,7 +396,6 @@
 			isa = PBXGroup;
 			children = (
 				5253243D1E318D5B00A69872 /* 身体的水 WatchKit Extension.entitlements */,
-				52CA42D91E2F308D0038EE33 /* BBMainIC.swift */,
 				52B6807D1E4C0E5600C721FF /* BBMainWaterIC.swift */,
 				523781971E4C0F2B0095C713 /* BBDrinkIC.swift */,
 				521E57561F0CC9E300547BC9 /* BBExtensions.swift */,
@@ -735,6 +742,8 @@
 			files = (
 				521378251E36058500B7D561 /* FaveIcon.swift in Sources */,
 				528759021E39C53C003A87E0 /* BBStaticVar.swift in Sources */,
+				52BF3E321F0F4D510046853C /* BBNetworkManager.swift in Sources */,
+				52BF3E301F0F4D4D0046853C /* BBLocationAndWeatherManger.swift in Sources */,
 				521378291E36058B00B7D561 /* Init.swift in Sources */,
 				521378281E36058B00B7D561 /* Geometry.swift in Sources */,
 				525324141E3044D800A69872 /* TodayViewController.swift in Sources */,
@@ -766,10 +775,12 @@
 				525324251E3069AC00A69872 /* BBNotificationModel.swift in Sources */,
 				528759041E39C582003A87E0 /* BBHealthKitManager.swift in Sources */,
 				521378211E36054C00B7D561 /* Init.swift in Sources */,
+				524A24FB1F0F2A47004E166C /* BBNetworkManager.swift in Sources */,
 				5253242B1E30AEC300A69872 /* BBBeginTimePicker.swift in Sources */,
 				52CA42521E2F24570038EE33 /* AppDelegate.swift in Sources */,
 				52CA428F1E2F2B0A0038EE33 /* BBSettingVC.swift in Sources */,
 				5213781E1E36054C00B7D561 /* Constraints+.swift in Sources */,
+				524A24F91F0F1B0C004E166C /* BBLocationAndWeatherManger.swift in Sources */,
 				525324231E3068B300A69872 /* BBConnectDataModel.swift in Sources */,
 				5213781C1E36054C00B7D561 /* FaveButton.swift in Sources */,
 			);
@@ -782,12 +793,13 @@
 				52B6807E1E4C0E5600C721FF /* BBMainWaterIC.swift in Sources */,
 				521E57571F0CC9E300547BC9 /* BBExtensions.swift in Sources */,
 				52CA427B1E2F24580038EE33 /* NotificationController.swift in Sources */,
+				52BF3E311F0F4D500046853C /* BBNetworkManager.swift in Sources */,
 				52CA427D1E2F24580038EE33 /* ComplicationController.swift in Sources */,
-				52CA42DA1E2F308D0038EE33 /* BBMainIC.swift in Sources */,
 				528759011E39C53B003A87E0 /* BBStaticVar.swift in Sources */,
 				52CA42791E2F24580038EE33 /* ExtensionDelegate.swift in Sources */,
 				52CA42DC1E2F35350038EE33 /* BBConnectModel.swift in Sources */,
 				528759051E39C8EE003A87E0 /* BBHealthKitManager.swift in Sources */,
+				52BF3E2F1F0F4D4D0046853C /* BBLocationAndWeatherManger.swift in Sources */,
 				523781981E4C0F2B0095C713 /* BBDrinkIC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

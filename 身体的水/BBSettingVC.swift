@@ -27,6 +27,9 @@ class BBSettingVC: UITableViewController{
         BBConnectDataModel.sharedModel.setSession()
         BBHealthKitManager.manager.authorization()
         layOutViewContent()
+        
+        
+        
     }
     
     private func layOutViewContent() {

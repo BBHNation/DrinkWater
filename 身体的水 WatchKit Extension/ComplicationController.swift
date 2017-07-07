@@ -44,12 +44,14 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         }
     }
     
+    /*
     func getNextRequestedUpdateDate(handler: @escaping (Date?) -> Void) {
         let date = Date()
         let timeInterval = TimeInterval.init(60)
         let nextDate = Date.init(timeInterval: timeInterval, since: date)
         handler(nextDate)
     }
+     */
     
     // MARK: - Timeline Population
     

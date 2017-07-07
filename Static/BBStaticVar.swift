@@ -20,6 +20,16 @@ let CUP_DRINK = "cupDrinkWater"// 一杯水
 let LITTLE_DRINK = "littleDrinkWater"// 一口水
 let IS_SETED_MAIN_SETTING = "isSettedMainSetting"// 是否设置了user主要数据
 
+extension String {
+    // url encode
+    var urlEncode : String {
+        return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+    }
+    // url decode
+    var urlDecode : String {
+        return self.removingPercentEncoding!
+    }
+}
 
 /// 每日刷新使用的Model
 class refreshModel : NSObject{

@@ -35,6 +35,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         reloadData()
         cupButton.isSelected = true
         littleButton.isSelected = true
+        
+        
+        BBLocationAndWeatherManger.manager.getCityAndWeatherInfo { (cityname, temperature, describe, err) in
+            if err != nil {
+                print("err is \(String(describing: err?.localizedDescription))")
+                return
+            }
+            print("\(String(describing: cityname)) \(String(describing: temperature))C \(String(describing: describe))")
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
