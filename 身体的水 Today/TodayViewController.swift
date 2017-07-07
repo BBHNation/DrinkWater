@@ -183,7 +183,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                     // 恢复UI
                     strongSelf.cupButton.isUserInteractionEnabled = true
                     strongSelf.littleButton.isUserInteractionEnabled = true
-                    strongSelf.noticeLabel.text = "点击按钮\n记录喝水"
+                    strongSelf.noticeLabel.text = "点击水滴\n记录喝水"
                     strongSelf.drinkNoticeLabel.text = "需要喝水"
                     
                     
