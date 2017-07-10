@@ -45,6 +45,26 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     /// 获取天气情况
     private func loadWeatherInfo() {
+        guard let weatherAndDateDic = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)?.value(forKey: WEATHER_DATE_AND_TEMPERATURE_KEY) else {
+            getWeatherInfoFromServer()
+            return
+        }
+        let weatherInfo = (weatherAndDateDic as! [String : Any])["weatherInfo"] as! [String : Any]
+        let date = (weatherAndDateDic as! [String : Any])["date"] as! Date
+        
+        switch Date().compare(date.addingTimeInterval(1800)) {
+        case .orderedDescending:
+            // 可以刷新
+            getWeatherInfoFromServer()
+        default:
+            adviceLabel.text = weatherInfo["advice"] as? String
+            weatherLabel.text = weatherInfo["weather"] as? String
+            weatherIcon.image = UIImage.init(named: weatherInfo["icon"] as! String)
+        }
+        
+    }
+    
+    private func getWeatherInfoFromServer() {
         BBLocationAndWeatherManger.manager.getCityAndWeatherInfo { [weak self] (cityname, temperature, describe, code, err) in
             guard let strongSelf = self else { return }
             if err != nil {
@@ -53,10 +73,16 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             }
             print("\(String(describing: cityname)) \(String(describing: temperature))C \(String(describing: describe))")
             DispatchQueue.main.async {
+                let userdefault = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
+                var dic: [String : Any] = [:]// 将目前的天气情况和目前的时间保存下来
+                var weatherInfoDic: [String : Any] = [:]// 天气情况
+                
                 strongSelf.weatherLabel.text = "\(cityname ?? " ") \(temperature ?? " ")C \(describe ?? " ")"
+                weatherInfoDic["weather"] = strongSelf.weatherLabel.text
                 
                 guard let c = code else { return }
                 strongSelf.weatherIcon.image = UIImage.init(named: "\(c).png")
+                weatherInfoDic["icon"] = "\(c).png"
                 
                 guard let tem = temperature else { return }
                 let temNum = Double(tem)
@@ -68,8 +94,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                     else {
                         strongSelf.adviceLabel.text = "健康饮水，健康生活"
                     }
+                    weatherInfoDic["advice"] = strongSelf.adviceLabel.text
+                    dic["weatherInfo"] = weatherInfoDic
+                    dic["date"] = Date()
+                    userdefault?.set(dic, forKey: WEATHER_DATE_AND_TEMPERATURE_KEY)
+                    userdefault?.synchronize()
                 }
-                
             }
         }
     }
