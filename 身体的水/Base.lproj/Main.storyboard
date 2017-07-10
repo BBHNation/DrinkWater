@@ -1,21 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="emU-0T-4Ew">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="emU-0T-4Ew">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--身体的水-->
+        <scene sceneID="2yb-7v-gwc">
+            <objects>
+                <viewController id="Muu-JO-B5G" customClass="BBMainVC" customModule="身体的水" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YAV-h0-Q6C"/>
+                        <viewControllerLayoutGuide type="bottom" id="jhJ-zQ-FBd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YDL-yK-X9h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testBack" translatesAutoresizingMaskIntoConstraints="NO" id="a2z-47-1IG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3X-7C-63q">
+                                <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ljq-9z-tKj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SomeThing To Be Done" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xO-Na-WFM">
+                                            <rect key="frame" x="94.5" y="323" width="187.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3xO-Na-WFM" firstAttribute="centerY" secondItem="Ljq-9z-tKj" secondAttribute="centerY" id="VCT-t2-IAf"/>
+                                        <constraint firstItem="3xO-Na-WFM" firstAttribute="centerX" secondItem="Ljq-9z-tKj" secondAttribute="centerX" id="hoa-hc-Chm"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a2z-47-1IG" firstAttribute="leading" secondItem="YDL-yK-X9h" secondAttribute="leading" id="5ji-oE-rP4"/>
+                            <constraint firstItem="jhJ-zQ-FBd" firstAttribute="top" secondItem="a2z-47-1IG" secondAttribute="bottom" id="7UX-Jq-KYT"/>
+                            <constraint firstItem="G3X-7C-63q" firstAttribute="centerX" secondItem="a2z-47-1IG" secondAttribute="centerX" id="DTV-x1-kVl"/>
+                            <constraint firstItem="G3X-7C-63q" firstAttribute="width" secondItem="a2z-47-1IG" secondAttribute="width" id="Kfv-0v-T0Y"/>
+                            <constraint firstItem="a2z-47-1IG" firstAttribute="top" secondItem="YDL-yK-X9h" secondAttribute="top" id="gzS-Jd-cM2"/>
+                            <constraint firstItem="G3X-7C-63q" firstAttribute="height" secondItem="a2z-47-1IG" secondAttribute="height" id="hms-OJ-W32"/>
+                            <constraint firstItem="G3X-7C-63q" firstAttribute="centerY" secondItem="a2z-47-1IG" secondAttribute="centerY" id="pAz-tv-fGo"/>
+                            <constraint firstAttribute="trailing" secondItem="a2z-47-1IG" secondAttribute="trailing" id="wMq-bV-mlX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="身体的水" id="ss2-Fq-nK2">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="bookmarks" id="uYB-9C-26X">
+                            <connections>
+                                <segue destination="G5N-UN-1yO" kind="show" id="3j2-b6-BBP"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="qVX-yP-45d">
+                            <connections>
+                                <segue destination="WPb-sH-Sdc" kind="show" id="myl-qr-iKg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xBd-dj-XAt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="240.62968515742131"/>
+        </scene>
+        <!--设置-->
         <scene sceneID="dCg-hj-UrH">
             <objects>
-                <tableViewController title="身体的水" id="WPb-sH-Sdc" customClass="BBSettingVC" customModule="身体的水" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="设置" id="WPb-sH-Sdc" customClass="BBSettingVC" customModule="身体的水" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Sgx-pK-fGP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="750"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -351,29 +416,7 @@
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="Ohh-bc-IMH">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="K8p-Rf-a4u">
-                                        <rect key="frame" x="0.0" y="547.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K8p-Rf-a4u" id="rL3-Ek-faB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="与Watch同步" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKf-cI-unk">
-                                                    <rect key="frame" x="136" y="11" width="103" height="21"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                    <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="NKf-cI-unk" firstAttribute="centerX" secondItem="rL3-Ek-faB" secondAttribute="centerX" id="kyk-vQ-NeP"/>
-                                                <constraint firstItem="NKf-cI-unk" firstAttribute="centerY" secondItem="rL3-Ek-faB" secondAttribute="centerY" id="slV-id-rsd"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tableViewCell>
-                                </cells>
+                                <cells/>
                             </tableViewSection>
                         </sections>
                         <connections>
@@ -382,13 +425,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="身体的水" id="UeK-2K-f2r">
-                        <barButtonItem key="leftBarButtonItem" title="提醒" style="done" id="TZN-xl-NPv">
-                            <color key="tintColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="G5N-UN-1yO" kind="show" id="Uev-Uw-zV1"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="设置" id="UeK-2K-f2r">
                         <barButtonItem key="rightBarButtonItem" title="保存" style="done" id="ltG-qY-vOP">
                             <color key="tintColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -398,7 +435,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="750"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="BBcupTextField" destination="a50-BN-Ys2" id="Pvv-m2-JuI"/>
                         <outlet property="BBlittleTextField" destination="aH5-YL-0Tu" id="QBd-Nt-MWX"/>
@@ -410,14 +447,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgl-Km-xPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273" y="242"/>
+            <point key="canvasLocation" x="1185" y="240"/>
         </scene>
         <!--提醒-->
         <scene sceneID="eNd-5Y-gAd">
             <objects>
                 <tableViewController id="G5N-UN-1yO" customClass="BBNoticeSettingVC" customModule="身体的水" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ibh-7v-5eS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="750"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -592,7 +629,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3k-SV-MWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1143" y="242"/>
+            <point key="canvasLocation" x="121" y="1002"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xgk-Tb-VHK">
@@ -606,12 +643,15 @@
                         <color key="barTintColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="WPb-sH-Sdc" kind="relationship" relationship="rootViewController" id="x72-Cm-5Qc"/>
+                        <segue destination="Muu-JO-B5G" kind="relationship" relationship="rootViewController" id="6ph-1v-MZa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sl-Z1-e9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-662" y="242"/>
+            <point key="canvasLocation" x="-700" y="241"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="testBack" width="1024" height="682"/>
+    </resources>
 </document>

@@ -18,28 +18,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Static/BBLocationAndWeatherManger.swift"
-            timestampString = "521095165.301369"
+            timestampString = "521361791.966847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "getCityAndWeatherInfo(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x8eab;&#x4f53;&#x7684;&#x6c34;/BBSettingVC.swift"
-            timestampString = "521100379.057589"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "saveAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -82,11 +66,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x8eab;&#x4f53;&#x7684;&#x6c34; Today/TodayViewController.swift"
-            timestampString = "521343002.95475"
+            timestampString = "521361791.966847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "changeNumAnimatly(_:endNum:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -98,11 +82,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x8eab;&#x4f53;&#x7684;&#x6c34; Today/TodayViewController.swift"
-            timestampString = "521343002.95475"
+            timestampString = "521361791.966847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "drinkOneCup(_:)"
             landmarkType = "7">
          </BreakpointContent>

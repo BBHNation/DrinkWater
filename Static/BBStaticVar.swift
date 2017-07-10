@@ -10,6 +10,8 @@
 
 import Foundation
 
+
+// MARK: 这里是一些UserDefault使用的KEY
 let LEFT_WATER_NUM = "waterNumLeft"// 剩下的水量
 let SHARED_USER_DEFAULT = "group.cn.iceFrozen.waterOfLife"// group共享defalt
 let SHARED_DATE = "group.cn.bbh.bodyWater.date"// 共享的日期，用来设置更新
@@ -23,6 +25,9 @@ let NEWEST_DRINKED_WATER_NUM_KEY = "newestDrinkedWaterNumKey"// 保存每一次�
 let TEMPERATURE_KEY = "temperatureKey"// 保存当前的温度，每次请求后刷新
 let WEATHER_DATE_AND_TEMPERATURE_KEY = "weatherDateAndTemperatureCacheKey"// 保存上一次刷新天气的时间和温度情况（是一个字典），刷新时候需要做一个判断，如果缓存的天气没有超过半个小时，使用之前的
 
+
+
+// MARK: - 这里是两个关于String在网络发包时候的编码解码方式
 extension String {
     // url encode
     var urlEncode : String {
@@ -34,6 +39,7 @@ extension String {
     }
 }
 
+// MARK: - 这里是每天刷新数据的模型
 /// 每日刷新使用的Model
 class refreshModel : NSObject{
     // 单例模式
@@ -89,6 +95,8 @@ class refreshModel : NSObject{
 
 }
 
+
+// MARK: - 这里是三个最常用的全局自由函数
 /// 根据人体数据来计算一天的喝水量，以后会加入天气情况
 ///
 /// - Returns: 返回一天的喝水量

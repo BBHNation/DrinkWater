@@ -17,6 +17,10 @@ class BBLocationAndWeatherManger: NSObject, CLLocationManagerDelegate {
     
     
     
+    
+    /// 网络请求获取天气情况
+    ///
+    /// - Parameter complete: Block
     public func getCityAndWeatherInfo(_ complete: @escaping (_ cityName: String?, _ temperature: String?, _ describe: String?, _ code: String?,_ err: Error?) -> ()) {
         getCurrentLocation { (placeMark, err) in
             if err != nil {
@@ -31,12 +35,13 @@ class BBLocationAndWeatherManger: NSObject, CLLocationManagerDelegate {
             let url: URL = URL.init(string: "https://api.seniverse.com/v3/weather/now.json?key=4DGW8W2I1Q&location=\(cityName)&language=zh-Hans&unit=c".urlEncode)!
             BBNetworkManager.manager.requestWith(way: .Get, url: url, parameters: nil, completeBlock: { (data, response, err) in
                 do {
-                    if data == nil {
+                    if data == nil { // 如果没有结果返回
                         let error: Error = NSError.init(domain: "没有结果返回", code: 1026, userInfo: nil) as Error
                         complete(nil, nil, nil, nil, error)
                         return
                     }
-                    let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String : Any]
+                    
+                    let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String : Any]// 解析Json
                     if let resultArr = json["results"] {
                         let result = (resultArr as! [Any]).first
                         guard let resultNow = (result as! [String : Any])["now"] as? [String : Any] else {

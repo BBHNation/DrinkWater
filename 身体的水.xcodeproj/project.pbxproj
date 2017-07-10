@@ -55,6 +55,7 @@
 		5287590C1E39CAA1003A87E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287590B1E39CAA1003A87E0 /* HealthKit.framework */; };
 		5287590D1E39CAAE003A87E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287590B1E39CAA1003A87E0 /* HealthKit.framework */; };
 		52B6807E1E4C0E5600C721FF /* BBMainWaterIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B6807D1E4C0E5600C721FF /* BBMainWaterIC.swift */; };
+		52B8D3B31F135B02002A825B /* BBMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B8D3B21F135B02002A825B /* BBMainVC.swift */; };
 		52BF3E2F1F0F4D4D0046853C /* BBLocationAndWeatherManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A24F81F0F1B0C004E166C /* BBLocationAndWeatherManger.swift */; };
 		52BF3E301F0F4D4D0046853C /* BBLocationAndWeatherManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A24F81F0F1B0C004E166C /* BBLocationAndWeatherManger.swift */; };
 		52BF3E311F0F4D500046853C /* BBNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A24FA1F0F2A47004E166C /* BBNetworkManager.swift */; };
@@ -176,6 +177,7 @@
 		528759091E39CA99003A87E0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		5287590B1E39CAA1003A87E0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		52B6807D1E4C0E5600C721FF /* BBMainWaterIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBMainWaterIC.swift; sourceTree = "<group>"; };
+		52B8D3B21F135B02002A825B /* BBMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBMainVC.swift; sourceTree = "<group>"; };
 		52CA424E1E2F24570038EE33 /* 身体的水.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "身体的水.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CA42511E2F24570038EE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52CA42561E2F24570038EE33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 			children = (
 				52CA428E1E2F2B0A0038EE33 /* BBSettingVC.swift */,
 				525324361E30B2CA00A69872 /* BBNoticeSettingVC.swift */,
+				52B8D3B21F135B02002A825B /* BBMainVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -767,6 +770,7 @@
 				521378231E36054C00B7D561 /* Spark.swift in Sources */,
 				528759001E39C534003A87E0 /* BBStaticVar.swift in Sources */,
 				525324371E30B2CA00A69872 /* BBNoticeSettingVC.swift in Sources */,
+				52B8D3B31F135B02002A825B /* BBMainVC.swift in Sources */,
 				521378221E36054C00B7D561 /* Ring.swift in Sources */,
 				521378201E36054C00B7D561 /* Geometry.swift in Sources */,
 				5253242F1E30AF9B00A69872 /* BBFrequencyTimePicker.swift in Sources */,
