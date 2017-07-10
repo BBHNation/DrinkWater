@@ -43,6 +43,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         timer = nil
     }
     
+    
     /// 获取天气情况
     private func loadWeatherInfo() {
         guard let weatherAndDateDic = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)?.value(forKey: WEATHER_DATE_AND_TEMPERATURE_KEY) else {
@@ -64,6 +65,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     }
     
+    
+    /// 从网络获取天气情况并作相应处理
     private func getWeatherInfoFromServer() {
         BBLocationAndWeatherManger.manager.getCityAndWeatherInfo { [weak self] (cityname, temperature, describe, code, err) in
             guard let strongSelf = self else { return }
@@ -103,8 +106,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             }
         }
     }
-
-    
     
     /// 点击按钮，喝一杯水
     @IBAction func drinkOneCup(_ sender: Any) {
@@ -118,8 +119,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         changeLocalNum(waterNum: getLittleDrink())
     }
     
-    
-    
     /// 改变本地数据
     ///
     /// - Parameter waterNum: 输入Int为喝了多少水
@@ -129,7 +128,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         BBHealthKitManager.manager.authorization()
         BBHealthKitManager.manager.writeDataWithWater(waterNum:Double(waterNum)/1000)
     }
-    
     
     /// 在插件界面动画的修改喝了多少水
     ///
@@ -188,8 +186,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         dataUserDefaults?.set(true, forKey: SHARED_USER_DEFALT_CHANGED)
         dataUserDefaults?.synchronize()
     }
-    
-    
     
     /// 刷新数据
     func reloadData() {
@@ -252,14 +248,13 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             }
         }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     func widgetPerformUpdate(_ completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         reloadData()
         completionHandler(NCUpdateResult.newData)
     }
-    
 }
