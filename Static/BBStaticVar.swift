@@ -24,6 +24,7 @@ let IS_SETED_MAIN_SETTING = "isSettedMainSetting"// 是否设置了user主要数
 let NEWEST_DRINKED_WATER_NUM_KEY = "newestDrinkedWaterNumKey"// 保存每一次从HeathKit中获取的喝水量，方便在锁屏的时候使用
 let TEMPERATURE_KEY = "temperatureKey"// 保存当前的温度，每次请求后刷新
 let WEATHER_DATE_AND_TEMPERATURE_KEY = "weatherDateAndTemperatureCacheKey"// 保存上一次刷新天气的时间和温度情况（是一个字典），刷新时候需要做一个判断，如果缓存的天气没有超过半个小时，使用之前的
+let healthColor = (31.0, 200.0, 100.0, 1.0)// 保存健康颜色的数据
 
 
 

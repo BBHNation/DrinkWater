@@ -28,13 +28,13 @@ class BBDrinkIC: WKInterfaceController {
         //喝一杯
         print("喝一杯")
         setDrinking()
-        BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(getCupDrink())/1000)
+        BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(getCupDrink())/1000, complete: {_ in })
     }
     @IBAction func drinkAMouse(_ sender: Any) {
         //喝一口
         print("喝一口")
         setDrinking()
-        BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(getLittleDrink())/1000)
+        BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(getLittleDrink())/1000, complete: {_ in })
     }
     
     private func postNotification() {

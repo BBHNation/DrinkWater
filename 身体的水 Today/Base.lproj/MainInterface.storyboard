@@ -73,13 +73,6 @@
                                     <action selector="drinkLittle:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="ZZB-Og-326"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pZK-RX-3Z0">
-                                <rect key="frame" x="16" y="5" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Ghk-Kw-4ob"/>
-                                    <constraint firstAttribute="width" constant="100" id="nj6-Um-OS4"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hi4-3a-QY8" customClass="FaveButton" customModule="身体的水_Today" customModuleProvider="target">
                                 <rect key="frame" x="124" y="65" width="40" height="40"/>
                                 <constraints>
@@ -169,6 +162,13 @@
                                     <outletCollection property="gestureRecognizers" destination="S5q-I3-hFN" appends="YES" id="jku-5P-n30"/>
                                 </connections>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pZK-RX-3Z0">
+                                <rect key="frame" x="16" y="5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Ghk-Kw-4ob"/>
+                                    <constraint firstAttribute="width" constant="100" id="nj6-Um-OS4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

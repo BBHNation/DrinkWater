@@ -86,7 +86,7 @@ class BBConnectModel: NSObject,WCSessionDelegate {
         UserDefaults.standard.set(waterNum, forKey: LEFT_WATER_NUM)
         UserDefaults.standard.synchronize()
         BBHealthKitManager.manager.authorization()
-        BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(num-numNew)/1000)
+        BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(num-numNew)/1000, complete: {_ in })
         updateData()
     }
     

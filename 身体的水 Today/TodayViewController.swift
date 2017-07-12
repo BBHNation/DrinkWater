@@ -27,10 +27,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     let totalWaterToDrink = calculateWaterNum()
     var leftWater = calculateWaterNum()
+    var circleLayer: CALayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        circleImage.image = UIImage.DrewCicle(percent: 1.0)
+//        circleImage.image = UIImage.DrewCicle(percent: 1.0)
+        circleImage.drawBackGroundCircle()
         refreshModel.sharedModel.refreshData()
         reloadData()
         cupButton.isSelected = true
@@ -74,7 +76,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 print("err is \(String(describing: err?.localizedDescription))")
                 return
             }
-            print("\(String(describing: cityname)) \(String(describing: temperature))C \(String(describing: describe))")
+            print("\(String(describing: cityname))   \(String(describing: temperature))C  \(String(describing: describe))")
             DispatchQueue.main.async {
                 let userdefault = UserDefaults.init(suiteName: SHARED_USER_DEFAULT)
                 var dic: [String : Any] = [:]// 将目前的天气情况和目前的时间保存下来
@@ -123,10 +125,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     ///
     /// - Parameter waterNum: 输入Int为喝了多少水
     private func changeLocalNum(waterNum : Int) {
-        changeNumAnimatly(leftWater, endNum: leftWater-waterNum)
         leftWater -= waterNum
         BBHealthKitManager.manager.authorization()
-        BBHealthKitManager.manager.writeDataWithWater(waterNum:Double(waterNum)/1000)
+        BBHealthKitManager.manager.writeDataWithWater(waterNum:Double(waterNum)/1000, complete: { [weak self] (success) in
+            guard let strongSelf = self else { return }
+            DispatchQueue.main.async {
+                strongSelf.changeNumAnimatly(strongSelf.leftWater+waterNum, endNum: strongSelf.leftWater)
+            }
+        })
     }
     
     /// 在插件界面动画的修改喝了多少水
@@ -135,6 +141,27 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     ///   - beginNum: 起始有多少水
     ///   - endNum: 终止为多少水
     private func changeNumAnimatly(_ beginNum : Int, endNum : Int) {
+        // 修改圆圈
+        BBHealthKitManager.manager.getTotalDrinkCount(completion: { [weak self] (drinked, err) in
+            guard let strongSelf = self else {return}
+            if err != nil { return }
+            let queue = DispatchQueue.main
+            queue.async(execute: {
+                let toPercent = drinked/Double(strongSelf.totalWaterToDrink)
+                let fromPercent = (drinked - Double(beginNum - endNum))/Double(strongSelf.totalWaterToDrink)
+                
+                strongSelf.circleLayer = strongSelf.circleImage.updateCircle(layer: strongSelf.circleLayer!, from: CGFloat(fromPercent), to: CGFloat(toPercent))
+                strongSelf.circleImage.layer.addSublayer(strongSelf.circleLayer!)
+                if toPercent >= 1.0 {
+                    strongSelf.noticeLabel.text = "恭喜你！\n完成任务"
+                    strongSelf.drinkNoticeLabel.text = "额外喝水"
+                }
+            })
+        })
+        
+        
+        
+        
         var sub = 1
         if (beginNum-endNum) >= getCupDrink() {
             // 设置步长
@@ -149,21 +176,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 self.waterCupLabel.text = String.init(format: "%.1f", ((Double(abs(begin))/Double(getCupDrink()))))
             }
             else {
-                // 修改圆圈
-                BBHealthKitManager.manager.getTotalDrinkCount(completion: { [weak self] (drinked, err) in
-                    guard let strongSelf = self else {return}
-                    if err != nil { return }
-                    let queue = DispatchQueue.main
-                    queue.async(execute: {
-                        
-                        let persent = drinked/Double(strongSelf.totalWaterToDrink)
-                        strongSelf.circleImage.image = UIImage.DrewCicle(percent: persent)
-                        if persent >= 1.0 {
-                            strongSelf.noticeLabel.text = "恭喜你！\n完成任务"
-                            strongSelf.drinkNoticeLabel.text = "额外喝水"
-                        }
-                    })
-                })
+                
                 self.timer?.invalidate()
                 self.timer = nil
             }
@@ -224,7 +237,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                         strongSelf.noticeLabel.text = "恭喜你！\n完成任务"
                         strongSelf.drinkNoticeLabel.text = "额外喝水"
                     }
-                    strongSelf.circleImage.image = UIImage.DrewCicle(percent: percent)
+                    if strongSelf.circleLayer != nil {
+                        strongSelf.circleLayer?.removeFromSuperlayer()
+                    }
+                    strongSelf.circleLayer = strongSelf.circleImage.drawCircle(percent: CGFloat(percent))
                 })
             })
         }

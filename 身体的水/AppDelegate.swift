@@ -30,10 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let identity = response.actionIdentifier
         if identity == drinkOneMouseIdentity {
             print("喝一口水")
-            BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(getLittleDrink())/1000)
+            BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(getLittleDrink())/1000, complete: {_ in })
         } else if identity == drinkOneCupIdentity {
             print("喝一杯水")
-            BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(getCupDrink())/1000)
+            BBHealthKitManager.manager.writeDataWithWater(waterNum: Double(getCupDrink())/1000, complete: {_ in })
         } else if identity == drinkCustomIdentity {
             print("喝自定义量")
             let text = (response as! UNTextInputNotificationResponse).userText
@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             if numString.length < 0 {
                 // 都是数字
                 print("喝水\(numString.doubleValue)ml")
-                BBHealthKitManager.manager.writeDataWithWater(waterNum: numString.doubleValue/1000)
+                BBHealthKitManager.manager.writeDataWithWater(waterNum: numString.doubleValue/1000, complete: {_ in })
             } else {
                 // 没有数字
                 // 不处理
