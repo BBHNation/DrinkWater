@@ -6,7 +6,7 @@ target '身体的水' do
     
 pod 'MJRefresh'
 pod 'SVProgressHUD'
-#pod 'FaveButton', '~> 2.0.3'
+pod 'Bugly'
 
 end
 

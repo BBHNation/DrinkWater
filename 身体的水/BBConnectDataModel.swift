@@ -39,7 +39,7 @@ class BBConnectDataModel: NSObject, WCSessionDelegate{
     ///
     /// - Parameter dic: 向Watch发送消息，消息格式是 [String : Any]
     public func sendMessage(dic : [String:Any]) {
-        SVProgressHUD.show(withStatus: "传输中")
+        SVProgressHUD.show(withStatus: "向Watch传输数据中\n请打开Watch APP")
         session.sendMessage(dic, replyHandler: { (replyDic) in
             print("成功返回")
             SVProgressHUD.showSuccess(withStatus: "传输成功")

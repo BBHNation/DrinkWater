@@ -27,12 +27,8 @@ class BBHealthKitManager: NSObject {
             return
         }
         healthStore.requestAuthorization(toShare: dataTypesToWrite(), read: dataTypesToRead()) { (success, error) in
-            if !success {
-                print("你没有允许获取健康信息")
-            }
-            else {
-                print("你允许了获取健康信息")
-            }
+            if !success {}
+            else {}
         }
     }
     
@@ -46,12 +42,6 @@ class BBHealthKitManager: NSObject {
         let sample = HKQuantitySample(type: type!, quantity: qutity, start: Date(), end: Date())
         healthStore.save(sample) { (success, error) in
             complete(success)
-            if (success==true) {
-                print("成功保存")
-            }
-            else {
-                print("保存失败")
-            }
         }
     }
     

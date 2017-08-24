@@ -74,6 +74,7 @@
 		52CA427F1E2F24580038EE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CA427E1E2F24580038EE33 /* Assets.xcassets */; };
 		52CA428F1E2F2B0A0038EE33 /* BBSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA428E1E2F2B0A0038EE33 /* BBSettingVC.swift */; };
 		52CA42DC1E2F35350038EE33 /* BBConnectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CA42DB1E2F35350038EE33 /* BBConnectModel.swift */; };
+		F95AE0DC5ECABCC4BEC5E1F5 /* Pods______Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A344644BA0C837A872F909D4 /* Pods______Today.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +219,7 @@
 			files = (
 				5287590C1E39CAA1003A87E0 /* HealthKit.framework in Frameworks */,
 				525324111E3044D800A69872 /* NotificationCenter.framework in Frameworks */,
+				F95AE0DC5ECABCC4BEC5E1F5 /* Pods______Today.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +445,6 @@
 				5253240A1E3044D800A69872 /* Sources */,
 				5253240B1E3044D800A69872 /* Frameworks */,
 				5253240C1E3044D800A69872 /* Resources */,
-				40D556FF680B9FF7785F6C52 /* [CP] Embed Pods Frameworks */,
 				D50E7976F493949735CB1ADD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -661,21 +662,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-身体的水/Pods-身体的水-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		40D556FF680B9FF7785F6C52 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-身体的水 Today/Pods-身体的水 Today-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		615B5870AFC7FDE4A8DDBF2F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -688,7 +674,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9B62D973CF5E288056DB4F9A /* [CP] Check Pods Manifest.lock */ = {
@@ -703,7 +689,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D50E7976F493949735CB1ADD /* [CP] Copy Pods Resources */ = {
@@ -934,7 +920,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -977,7 +963,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

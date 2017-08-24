@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="emU-0T-4Ew">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="emU-0T-4Ew">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -59,21 +59,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="身体的水" id="ss2-Fq-nK2">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="bookmarks" id="uYB-9C-26X">
-                            <connections>
-                                <segue destination="G5N-UN-1yO" kind="show" id="3j2-b6-BBP"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="qVX-yP-45d">
-                            <connections>
-                                <segue destination="WPb-sH-Sdc" kind="show" id="myl-qr-iKg"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" image="提醒" style="plain" id="uYB-9C-26X"/>
+                        <barButtonItem key="rightBarButtonItem" image="设置" style="plain" id="qVX-yP-45d"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBd-dj-XAt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120.8" y="240.62968515742131"/>
+            <point key="canvasLocation" x="166" y="-429"/>
         </scene>
         <!--设置-->
         <scene sceneID="dCg-hj-UrH">
@@ -426,6 +418,12 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="设置" id="UeK-2K-f2r">
+                        <barButtonItem key="leftBarButtonItem" title="提醒" id="hdS-Kk-jv1">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="G5N-UN-1yO" kind="show" id="Vfv-fA-YEx"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="保存" style="done" id="ltG-qY-vOP">
                             <color key="tintColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -447,7 +445,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgl-Km-xPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1185" y="240"/>
+            <point key="canvasLocation" x="166" y="241"/>
         </scene>
         <!--提醒-->
         <scene sceneID="eNd-5Y-gAd">
@@ -629,7 +627,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3k-SV-MWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121" y="1002"/>
+            <point key="canvasLocation" x="1108" y="241"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xgk-Tb-VHK">
@@ -643,7 +641,7 @@
                         <color key="barTintColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Muu-JO-B5G" kind="relationship" relationship="rootViewController" id="6ph-1v-MZa"/>
+                        <segue destination="WPb-sH-Sdc" kind="relationship" relationship="rootViewController" id="OJt-fB-FnQ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Sl-Z1-e9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -653,5 +651,7 @@
     </scenes>
     <resources>
         <image name="testBack" width="1024" height="682"/>
+        <image name="提醒" width="100" height="100"/>
+        <image name="设置" width="30" height="30"/>
     </resources>
 </document>

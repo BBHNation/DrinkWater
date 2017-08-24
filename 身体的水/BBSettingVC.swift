@@ -119,9 +119,6 @@ class BBSettingVC: UITableViewController{
             SVProgressHUD.showInfo(withStatus: "今日应喝\(count)毫升水")
             BBSettingDataModel.sharedModel.saveDataToUserDefalt()
         }
-        else if indexPath.section == 4 {
-            BBConnectDataModel.sharedModel.updateData()
-        }
     }
 
 }

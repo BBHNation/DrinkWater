@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         UNUserNotificationCenter.current().delegate = self
+        Bugly.start(withAppId: "cd225684-bd34-41cb-8e7d-235bf50a7012")
         return true
     }
     
